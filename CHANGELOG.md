@@ -3,6 +3,26 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.1.13 (2778)
+
+The headline for this release: play any channel in VLC — or another player on your computer or phone — straight from the web interface.
+
+## New Feature
+
+- **Web interface: external player.** Every channel and favourite row has two new buttons next to ▶ (play in app):
+  - **VLC direct** hands the provider's stream link to the player on your computer or phone.
+  - **VLC proxy** streams through the box instead: provider credentials stay on the device, and HLS streams are relayed as well.
+
+  On a computer the button downloads a small .m3u that opens in VLC or any player that reads playlists; on a phone or tablet it opens VLC directly.
+
+## Added
+
+- Web interface: an icon for every main-menu item.
+
+## Changed
+
+- Web interface: the ▶ and VLC buttons of the channel list sit in one row at the same height.
+
 ## 2.1.12 (2773)
 
 - Stalker: portal refusal reasons shown
