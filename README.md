@@ -51,6 +51,9 @@ Requirements: Android 8.0 or newer. Fire TV: Fire OS devices (Fire TV Stick, Fir
     <td><a href="screenshots/settings.png"><img src="screenshots/thumbs/settings.jpg" alt="AI subtitles settings"></a><br><sub>AI subtitles settings</sub></td>
     <td><a href="screenshots/whoswatching.png"><img src="screenshots/thumbs/whoswatching.jpg" alt="Profiles"></a><br><sub>Profiles</sub></td>
   </tr>
+  <tr>
+    <td colspan="2"><a href="screenshots/web-interface.png"><img src="screenshots/thumbs/web-interface.jpg" alt="Web interface"></a><br><sub>Web interface: browse and install addons from any browser on your network</sub></td>
+  </tr>
 </table>
 
 ## Privacy
