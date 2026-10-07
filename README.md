@@ -1,21 +1,24 @@
-# IPTV AiSubs
+<p align="center">
+  <img src="screenshots/banner.png" width="640" alt="IPTV AiSubs">
+</p>
 
-IPTV player for Android TV, Fire TV and phones, with AI-generated subtitles.
+**IPTV player for Android TV, Fire TV and phones, with AI-generated subtitles.**
 
 This repository publishes the sideload releases and hosts the public issue tracker. The app's source code is not public.
 
-## Download
+## Install
 
-- **Google Play** (phones, tablets, Android TV / Google TV): <https://play.google.com/store/apps/details?id=com.qsparks.iptv.aisubs>
-- **Sideload APK** (Fire TV, Android TV boxes, phones without Google Play): the [latest release](https://github.com/noahqsoft/iptv-aisubs-releases/releases/latest), or this direct link, which always points to the newest build:
-  `https://github.com/noahqsoft/iptv-aisubs-releases/releases/latest/download/iptv-aisubs-fire.apk`
-- **Fire TV with Downloader** (by AFTVnews): enter the code **6783914**.
+**[Download latest APK](https://github.com/noahqsoft/iptv-aisubs-releases/releases/latest/download/iptv-aisubs-fire.apk)** — Fire TV, Android TV boxes, phones without Google Play. All releases: [Releases](https://github.com/noahqsoft/iptv-aisubs-releases/releases).
 
-The sideload APK is the Fire build: it does not depend on Google Play services. It tells you when a new version is out; install the new APK over the old one, your settings and data are kept. On devices with Google Play, prefer the Play version, which updates itself. Both builds are signed with the same key, so one can be installed over the other.
+Or install the [Downloader](https://www.aftvnews.com/downloader/) app on your Fire TV and enter code **6783914**.
+
+On devices with Google Play, use the Play version, which updates itself: <https://play.google.com/store/apps/details?id=com.qsparks.iptv.aisubs>
+
+The sideload APK is the Fire build: it does not depend on Google Play services. It tells you when a new version is out; install the new APK over the old one, your settings and data are kept. Both builds are signed with the same key, so one can be installed over the other.
 
 Requirements: Android 8.0 or newer. Fire TV: Fire OS devices (Fire TV Stick, Fire TV Cube); the newer Vega OS devices cannot run Android APKs.
 
-## What it does
+## Features
 
 - **Live TV** from M3U playlists, Xtream Codes and Stalker portals, with EPG, a TV guide, catch-up and recording (DVR).
 - **AI subtitles**: live speech recognition and translation on any stream, using your own API key at Soniox, Gladia, OpenAI, Gemini or Deepgram.
