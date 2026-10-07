@@ -28,6 +28,31 @@ Requirements: Android 8.0 or newer. Fire TV: Fire OS devices (Fire TV Stick, Fir
 - **Profiles**, multiview, and settings sync between devices over SMB or WebDAV.
 - Interface in English and Hungarian.
 
+## Screenshots
+
+<table>
+  <tr>
+    <td><a href="screenshots/library01.png"><img src="screenshots/thumbs/library01.jpg" alt="Library"></a><br><sub>Library</sub></td>
+    <td><a href="screenshots/discover01.png"><img src="screenshots/thumbs/discover01.jpg" alt="Discover"></a><br><sub>Discover: cinema and digital releases</sub></td>
+  </tr>
+  <tr>
+    <td><a href="screenshots/tmdb-details01.png"><img src="screenshots/thumbs/tmdb-details01.jpg" alt="Title page"></a><br><sub>Title page: ratings, trailer, cast and sources</sub></td>
+    <td><a href="screenshots/tmdb-details02.png"><img src="screenshots/thumbs/tmdb-details02.jpg" alt="Actor page"></a><br><sub>Actor page with sortable filmography</sub></td>
+  </tr>
+  <tr>
+    <td><a href="screenshots/episodetrack.png"><img src="screenshots/thumbs/episodetrack.jpg" alt="Episode tracking"></a><br><sub>Episode tracking</sub></td>
+    <td><a href="screenshots/addons01.png"><img src="screenshots/thumbs/addons01.jpg" alt="Where to watch"></a><br><sub>Where to watch: addons, IPTV VOD, streaming services</sub></td>
+  </tr>
+  <tr>
+    <td><a href="screenshots/EPG.png"><img src="screenshots/thumbs/EPG.jpg" alt="TV guide"></a><br><sub>TV guide</sub></td>
+    <td><a href="screenshots/DVR-scheduler.png"><img src="screenshots/thumbs/DVR-scheduler.jpg" alt="Recording from the guide"></a><br><sub>Recording from the guide</sub></td>
+  </tr>
+  <tr>
+    <td><a href="screenshots/settings.png"><img src="screenshots/thumbs/settings.jpg" alt="AI subtitles settings"></a><br><sub>AI subtitles settings</sub></td>
+    <td><a href="screenshots/whoswatching.png"><img src="screenshots/thumbs/whoswatching.jpg" alt="Profiles"></a><br><sub>Profiles</sub></td>
+  </tr>
+</table>
+
 ## Privacy
 
 The app sends nothing on its own: no account, no analytics, no telemetry. It only talks to the services you configure — your IPTV provider, addons, metadata sources, and AI providers with your own keys.
