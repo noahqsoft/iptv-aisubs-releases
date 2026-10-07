@@ -3,6 +3,20 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.1.14 (2785)
+
+The headline for this release: addons now follow the profile — each profile sees only its own addons, and switching one off no longer touches the other profiles.
+
+## New Feature
+
+- **Addon on/off per profile.** Disable in one profile keeps the addon running in every other profile; Enable brings it back for that profile only. Works in the app's addon manager and in the web interface.
+
+## Changed
+
+- Addon lists (the app's addon manager under Add, and the web interface) show only the addons allowed for the current profile. A profile without addon management sees no Remove/Disable buttons and no Browse, New addon or Import tabs.
+- Seek bar: the seek offset (for example +2:42) sits under the time in smaller digits, and the bar no longer shifts when seeking starts.
+- Web interface: Radio stations moved from Addons to Providers, and the tab only appears when a radio addon is installed and allowed for the profile.
+
 ## 2.1.13 (2778)
 
 The headline for this release: play any channel in VLC — or another player on your computer or phone — straight from the web interface.
