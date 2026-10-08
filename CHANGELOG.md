@@ -3,6 +3,10 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.1.16 (2835)
+
+- Trailer interface improved
+
 ## 2.1.15 (2827)
 
 The headline for this release: a trailer channel in Discover — pick a list and its trailers play back to back, the next one already loading.
