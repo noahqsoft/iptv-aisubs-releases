@@ -3,7 +3,7 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
-## 2.1.16 (2835)
+## 2.1.16 (2836)
 
 - Trailer interface improved
 
