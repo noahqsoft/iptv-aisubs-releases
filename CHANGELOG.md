@@ -3,6 +3,34 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.1.15 (2827)
+
+The headline for this release: a trailer channel in Discover — pick a list and its trailers play back to back, the next one already loading.
+
+## New Feature
+
+- **Trailers ▾ in Discover.** Movies: Coming soon to cinemas, Now in cinemas, Coming soon to digital, New on digital, Digital in the last year. Series: New series coming soon, New seasons coming soon, Most popular series, Ended in the last year. Trailers play one after another; the next one preloads while the current one plays.
+- **Title page from the reel.** Pause and press ▼ to open the title's page (add it to favourites, check sources); press Back and the reel continues where it stopped.
+
+## Added
+
+- Reel caption: IMDb score, cinema and digital release dates for movies, last and next episode with air date for series.
+- Web interface: System → Trailers, with the trailer subtitles switch.
+
+## Changed
+
+- Lists follow the film data language's region: cinema dates of that country, digital releases of that country (topped up from the US when few), series from the networks and streamers available there. Lists start shuffled and keep growing in the background.
+- Trailer language: the preferred audio language first, then the film data language, then English — in the reel and on the title page. Trailer subtitles follow the preferred subtitle languages.
+- Reel controls: ▲ next, ▼ subtitles on/off.
+- Discover top row: Movies/Series, Trailers, source, size, refresh, search; the source button shows only its name.
+- The first trailer starts faster.
+
+## Fixed
+
+- A slow-loading first trailer was skipped.
+- A trailer addon's video that cannot be embedded no longer drops the title; the TMDB trailer plays instead.
+- Switching a trailer addon off no longer keeps its old videos.
+
 ## 2.1.14 (2785)
 
 The headline for this release: addons now follow the profile — each profile sees only its own addons, and switching one off no longer touches the other profiles.
