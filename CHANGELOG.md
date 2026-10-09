@@ -3,6 +3,19 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.1.17 (2838)
+
+This release fixes large Xtream series catalogs and makes trailers stop with a clear message when YouTube blocks playback.
+
+## Fixed
+
+- **Large Xtream series catalogs now import.** With providers listing tens of thousands of series, a TV box could import zero series while channels and movies were fine: the series list was loaded in one piece and ran out of memory. It now loads row by row, like the movie list.
+- If the series list still fails to load, the import summary says so instead of silently showing zero series.
+
+## Changed
+
+- **Trailers stop when YouTube blocks them.** When YouTube asks your network to "confirm you're not a bot", the trailer reel no longer skips through the whole list. After three failed trailers in a row it stops and shows YouTube's message. ▲ tries the next trailer; Back closes the reel.
+
 ## 2.1.16 (2836)
 
 - Trailer interface improved
