@@ -64,9 +64,13 @@ The app sends nothing on its own: no account, no analytics, no telemetry. It onl
 
 IPTV AiSubs is a player. It does not include or provide channels, videos or subscriptions; you bring your own playlists, services and addons.
 
+## Community
+
+Questions, ideas and news: join the [Discord server](https://discord.gg/44sT7nwm8M).
+
 ## Bugs and requests
 
-Use the [issue tracker](https://github.com/noahqsoft/iptv-aisubs-releases/issues). For playback or subtitle problems, attach the diagnostic log shared from the app's Diagnostics screen, and the build number shown in Settings. Remove anything private from the log before posting (playlist URLs with credentials, API keys).
+Use the [issue tracker](https://github.com/noahqsoft/iptv-aisubs-releases/issues). For playback or subtitle problems, attach the diagnostic log from the web interface (Overview → Diagnostics → masked download) and the build number shown in Settings. Remove anything private from the log before posting (playlist URLs with credentials, API keys).
 
 ## Changelog
 
