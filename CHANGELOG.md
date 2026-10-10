@@ -3,6 +3,63 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.1.18 (2871)
+
+This release brings Simkl sync, trailers for every addon catalog, free channel numbering in Favorites and hideable channel groups.
+
+## App
+
+### IPTV
+
+- **Set a channel's number directly.** Long-press OK on a channel in a Favorite TV folder and choose "Channel number". With continuous numbering, a number that belongs to another folder moves the channel into that folder, exactly to that number. Another provider's folder only accepts it if it is an MPF folder.
+- **Move up / Move down works in A–Z order too.** The first manual move switches the channel order to Custom, starting from the order you see.
+- **Hidden groups stay hidden.** Groups hidden on the web interface are left out of the channel browser, of search results across groups and of the catch-up groups in the TV guide. Nothing is deleted, and channels already in your favorites stay there.
+- The channel numbering mode (per folder, continuous or off) follows a change made on the web interface immediately.
+
+### Addons
+
+- **Sources: one row per release.** When an addon lists the same release in several resolutions, they share one row with a button for each (for example 1080p · 2.10 GiB, 720p · 1.38 GiB); ◀ ▶ switches between them.
+- **Trailers for addon catalogs.** Every addon catalog in Discover gets a Trailers menu. It plays the trailers of the list's titles in the order shown and follows the filter, order, time and genre settings.
+
+### Discover and trailers
+
+- **Not seen switch.** Hides watched movies, and ended or canceled series you have watched. Continuing series stay, because a new season is coming. The trailer reel skips them too.
+- **Endless trailer reel.** When a list ends, the next list starts; after the last one, the first one again.
+- **Order by digital release date** in Discover and in the movie and series favorites.
+- **Longer time filters:** last 60, 90 and 120 days. The trailers' "Now in cinemas" and "New on digital" lists follow the time filter; without one, "Now in cinemas" covers the last 120 days instead of 60.
+- **Cinema rows without foreign re-releases.** An old film re-released somewhere else (say, in Argentina) no longer shows up under "Now playing in cinemas" or "Coming soon".
+- **Choose the trailer regions.** The trailer lists (cinemas, digital releases, series) are collected from the countries you pick on the web interface, as many as you like; by default they follow the TMDB language (English → United States). A checkbox lets Discover's cinema rows use the same countries, so a row and its trailers match.
+- **Rows glide.** Moving between Discover rows scrolls at a steady, even pace instead of snapping. The rows ahead and behind are prepared in advance, and background loading (posters, scores, paging) pauses while the list moves, so the motion stays smooth.
+- TMDB trailer lists follow the Discover order, time and genre settings instead of a random order.
+- The Trailers menu moved to the end of the second row: Filter – Order – Time – Genre – Trailers.
+- TMDB lists are always available; the separate checkbox is gone.
+- The trailers' subtitle button shows whether subtitles exist and whether they are on.
+
+### Other
+
+- **Loading instead of jumping lists.** While a list's final order is being assembled (digital-date or IMDb sorting, the Not seen filter, a catalog's first page), placeholder cards of the exact final size stand in; you can already move across them, and the focus lands on the matching real card. The placeholders wave gently in the app's colors, and a card appears only once its poster and dates are final; the score badge fades in instead of popping up.
+- **Simkl sync.** Watched movies and episodes (with the real watch time) and favorites sync both ways with Simkl, for TMDB titles. Connect under Integrations on the web interface.
+- The seek bar shows the remaining time, with a minus sign, under the elapsed time.
+- Dates follow the format of the selected language.
+- The Discord community is linked under Support.
+
+## Web interface
+
+### IPTV
+
+- **Favorites:** a channel numbering selector and an "Add folder" field at the top of the list.
+- **Channel numbers can be typed in every order** (A–Z switches to Custom on the first change) and beyond the current page. With continuous numbering, a number of another folder moves the channel into that folder.
+- **A ★ before each channel name** shows which folders contain the channel, and copies or moves it into other folders — MPF folders included, so one list can collect channels from several providers.
+- **Hide channel groups.** Hide or Show per group, or for the selected groups. Hidden groups are greyed out and can be restored. The group list can show the original order or the visible groups first, and "Select on this page" picks the visible, the hidden or all groups.
+- Groups have an "Open" button, like favorite folders, instead of the small Browse link.
+
+### Other
+
+- System → Trailers has two tabs: Subtitles, and Regions with a searchable country list.
+- System → Picture is split into tabs: Resolution and refresh rate, Decoding.
+- A Simkl page under Integrations: connect, sync now and disconnect.
+- A Community section with the Discord link in Help.
+
 ## 2.1.17 (2838)
 
 This release fixes large Xtream series catalogs and makes trailers stop with a clear message when YouTube blocks playback.
