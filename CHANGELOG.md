@@ -3,6 +3,55 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.2.0 (2896)
+
+This release brings faster, steadier TV navigation with a choice of fade or scroll between card rows, your own 1–10 ratings synced with Simkl and rateable on IMDb by QR code, and a Library you can trim and reorder. It also contains 2.1.19, which was not released on its own.
+
+## App
+
+### TV navigation
+
+- **Fade or scroll between card rows.** On TV, moving to another row of cards now fades over to it by default instead of scrolling the list. Settings → Playback & interface → TV browsing → Card navigation switches between Fade and Scroll. It applies to Discover, Favorites, RSS releases and My media, and to the cast and recommendation rows of a detail page.
+- **Instant response to the remote.** Every key press is answered at once; a transition or a loading card never holds up the next step.
+- **The column stays.** Moving up or down keeps the focus in the same column on screen, also into a shorter last row and into the horizontal rows of a detail page.
+- **Thinner focus border** throughout the app. A focused card is enlarged from the very first frame and keeps its size during the transition. Cast cards are all the same height, and stepping sideways on a detail page no longer shifts the page.
+- **Changed filters stand out.** A filter or sort at its default value looks neutral; a changed one keeps a muted outline that differs from the focus.
+- **Faster cards.** A card on screen and the same card being prepared ahead share one download, and a missing score is fetched without waiting.
+- Settings: focused items no longer zoom and are no longer cut off at the edges.
+- Cast cards: a long role can use the free line under a short name, without changing the row height.
+
+### Ratings
+
+- **Your own ratings.** Rate movies, series and single episodes from 1 to 10: Rate on the detail page, and in an episode's info window. Ratings are kept per profile.
+- **Rate on IMDb.** On TV a QR code opens the title in the IMDb app on your phone, where you rate it with your own IMDb account; OK on the code shows it full screen. On a phone, a button opens the IMDb app (or the browser).
+- **Rate button in the player** for movies and episodes with TMDB data, never for live TV or other videos. Switch it on under Quick settings → Controls shown on picture; it sits at the right end of the seek bar, with the IMDb QR code too.
+- **Simkl sync.** Movie and series ratings sync both ways with Simkl; episode ratings stay in the app.
+- **Ratings in backup and cloud sync**, as a separate item per profile.
+
+### Discover, Favorites and Library
+
+- **Choose and order the Library blocks.** Settings → Playback & interface → Interface → Library blocks: switch blocks off, move them with the arrows, or return to the default order. Blocks the profile cannot use can be hidden too.
+- **Series by date: latest episode first.** For series, Date sorts by the last aired episode, and "Date digital" is gone from their sort menu.
+- **Favorites: the header stays** while the list scrolls, and the focused row moves to the top, as in Discover, My media and RSS releases.
+- **Back goes to the Movies/Series switch first** in Favorites, My media and RSS releases, as in Discover; a second Back leaves.
+- **Fresher IMDb scores.** The app looks for the new daily IMDb data every hour and uses it at once; when MDBList has a more up-to-date score (more votes), that one is shown.
+- Favorites: the "Check availability" button and its background scan are gone.
+
+### Trailers
+
+- **Favorite button** in the trailer reel: ★ shows whether the title is a favorite and adds or removes it at once.
+- **Trailers on phones:** the buttons fit in portrait, a seek bar lets you drag through the trailer, and Back closes it instead of leaving a white screen, also after a visit to the title's details.
+
+## Web interface
+
+- **Ratings** in Title Finder: your rating of a title and of each episode, and a link to rate it on IMDb.
+- **Interface page** (System → Interface): choose and order the Library blocks.
+- Backup and cloud sync list "My ratings (titles and episodes)" as their own item.
+
+## 2.1.19 (2893)
+
+Not released on its own: its changes are part of 2.2.0.
+
 ## 2.1.18 (2871)
 
 This release brings Simkl sync, trailers for every addon catalog, free channel numbering in Favorites and hideable channel groups.
