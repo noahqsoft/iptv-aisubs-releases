@@ -3,7 +3,7 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
-## 2.2.0 (2896)
+## 2.2.0 (2900)
 
 This release brings faster, steadier TV navigation with a choice of fade or scroll between card rows, your own 1–10 ratings synced with Simkl and rateable on IMDb by QR code, and a Library you can trim and reorder. It also contains 2.1.19, which was not released on its own.
 
@@ -19,6 +19,11 @@ This release brings faster, steadier TV navigation with a choice of fade or scro
 - **Faster cards.** A card on screen and the same card being prepared ahead share one download, and a missing score is fetched without waiting.
 - Settings: focused items no longer zoom and are no longer cut off at the edges.
 - Cast cards: a long role can use the free line under a short name, without changing the row height.
+
+### Phones
+
+- **Cards as fast as on TV.** Scrolling prepares the rows below, swiping a row prepares the next cards, and a card appears as soon as its poster is loaded.
+- **The same cast cards and chips as on TV.** Cast cards are all the same height, with the name and role sharing their lines; an active chip is outlined instead of filled.
 
 ### Ratings
 
