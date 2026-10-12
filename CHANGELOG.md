@@ -3,6 +3,56 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.2.1 (2938)
+
+This release brings a jump-back button and a recently watched channels panel for the remote, fixed whole-row navigation for channel lists, the TV guide and cards (now the default), a cleaner TV look with a frame only on the focused item, and TMDB pages that open with the title's poster.
+
+## App
+
+### Remote control
+
+- **Jump to the last watched channel.** A new action, "Last watched channel (back and forth)", switches between your last two live channels. Put it on any programmable button; the remote's Last/Recall button does it by default. You land in the list you came from, so Up/Down continues there.
+- **Recently watched channels panel.** Another programmable action opens your recently watched channels in a side panel on the right. It is built from History, and a live channel only counts after 3 seconds of watching, so channels you just zapped through stay out. A channel picked there opens in its favorites folder, or else in its own group.
+- **Separate button layouts for Live TV, Movies & series, and Elsewhere.** A button can do one thing while you watch live TV, another while you watch a movie or an episode, and keep its own function on every other screen. New for movies and series: seek ±10 seconds or ±1 minute, previous and next episode. Where an action does not apply, the button simply does its usual job, without a message. Arrows, OK and Back always work in open player menus and lists, and no mapping applies while you type in a text field. Your existing layout moved to Live TV; its parts that also make sense for movies were copied there once.
+
+### Channel lists and TV guide
+
+- **Fixed navigation, now the default.** Settings → Playback & interface → TV browsing → Channel navigation: Fixed or Scroll. In Fixed mode the list does not glide; the focus moves, and the list steps a whole row when the focus reaches the second-to-last row going down or the second row going up. Rows sit on a fixed grid sized so that whole rows fill the list, with no cut-off row. Scroll mode uses the same grid and glides instead. It applies to channel, group and folder lists (list and grid view), History, the TV guide, the quick channel list and the recently watched panel.
+- **The focus keeps up.** Holding Up or Down no longer lets the focus run off the list, and in Scroll mode the 5-row jump with Left/Right glides in one go.
+- **Quick channel list in a side panel.** On TV the quick list opens as a full-height panel on the left, right on the current channel, without first showing the top of the list. The focused row is cyan, ▶ marks the channel you are watching, and logos are 16:9. The folder bar and the season and episode lists use the same style, and the player controls step aside while the panel is open. Phones keep the old layout.
+- **The focused row stands out more.** Its highlight reaches into the gaps above and below, so the row looks bigger instead of squeezed.
+- **TV guide:** Left/Right no longer gets stuck on overlapping programmes, and Up/Down no longer stops at a channel that has no guide data or is still loading.
+- Favorite TV: the active folder in the top bar is filled cyan instead of having a thin outline.
+
+### Cards
+
+- **Fixed instead of Fade.** Card navigation's Fade mode is now Fixed: the row changes at once, without the fade effect and the work behind it. After the update both card and channel navigation start in Fixed mode; a choice you make afterwards is kept.
+- **Left/Right stays in the row.** At the end of a row in My media and RSS releases, the focus no longer jumps to another row or to the header, in both modes, as in Favorites.
+- **Focused cards** show a brighter fill and the zoom, without a frame.
+- Discover: a card alone in its row is no longer cut off at the sides when focused, and paging down quickly no longer crashes.
+
+### TV look
+
+- **A frame only on the focused item.** On TV the faint outlines around cards, rows, boxes, drop-down menus and the TMDB header are gone; a frame now marks the focus and nothing else. Phones keep their outlines.
+- **Switched-on chips are cyan**, with a very faint, darker frame that differs from the focus frame; switched-off chips are white. This also fixes the Discover header, where some chips looked switched on when they were not.
+- **Player chips:** the subtitle and audio chips are the same height as the others (on phones too), the focus frame of the bottom chips stays steady, the top chips have a frame only when focused, and the zap info cards show just their dark background.
+
+### TMDB pages
+
+- **Open with the title's poster.** On TV the card's poster appears at once, large, while the page builds up behind it; then it softens into the page's background and moves with the page as you scroll. The page no longer draws itself block by block. When the page is opened from a place that does not know the poster (RSS, History, Stremio cards), the palette's colours cover it instead.
+- The Stream sources button has a subtle dark background, so it stays readable over the picture.
+
+### Addons and IMDb
+
+- **Addon sources follow the channel navigation** setting (Fixed or Scroll), with the same zoomed focus as the channel lists.
+- **More shows in addons.** When TMDB has no IMDb ID for a series, the app looks it up on TVmaze by title and accepts only an unambiguous match, so addon sources can be searched for those shows too.
+- **An IMDb score for every title, right away.** The app keeps a local index of the full daily IMDb dataset (about 1.7 million titles), so cards show their IMDb score at once, and Discover prepares the scores of every row ahead. Building the index takes about half a minute in the background, once a day.
+
+## Web interface
+
+- **TV browsing** settings under System → Interface: card navigation, channel navigation, live preview, folder list size and side menu. A change applies on the TV at once.
+- **Remote control:** Live TV, Movies & series and Elsewhere have their own button layouts, with the new actions.
+
 ## 2.2.0 (2900)
 
 This release brings faster, steadier TV navigation with a choice of fade or scroll between card rows, your own 1–10 ratings synced with Simkl and rateable on IMDb by QR code, and a Library you can trim and reorder. It also contains 2.1.19, which was not released on its own.
