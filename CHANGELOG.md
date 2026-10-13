@@ -3,6 +3,73 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.2.2 (2973)
+
+This release brings a live timeshift you can rewind for hours and keep as a recording, a compact TV layout with twice as many rows on screen, a slimmer icon menu that can stay beside every page, the compact layout and the TV's quick channel list on phones, a single History timeline, and a simpler Discover filter.
+
+## App
+
+### Live timeshift
+
+- **Rewind live TV.** Start timeshift, a new button in the player on live channels and a programmable remote action, records the channel into your recordings location (internal storage, USB drive or network share) and switches the player to that recording. From then on you can pause, rewind and fast-forward back to the moment you started it, however long ago. Live jumps to the newest part, about 10–20 seconds behind the broadcast.
+- **Keep it if you want.** DVR → Save current timeshift turns it into an ordinary recording, from its start until you stop it. An unsaved timeshift is deleted when you change channel, stop it or leave the player, and it never shows among your recordings.
+- It replaces the earlier timeshift chip, which kept only about five minutes. Timeshift needs the Media3 player and does not run alongside AI subtitles.
+
+### Compact layout
+
+- **Twice as many rows.** Settings → Playback & interface → Appearance → TV spacing has a new choice, Compact. Live TV and Favorite TV then use one-line rows of equal height: as many whole rows as fit (about twelve), eight under the live preview, and 2×5 folders with their names in the small folder list. The focused row opens up as a larger card over its neighbours (a channel with a bigger logo and two lines of guide, a group or folder with its channel count and buttons), while its place on the grid stays, so whole-row stepping works as before. The header of the preview browser is half as tall, and its info box takes a single line.
+- **What is playing stays marked.** The channel you are watching and the open folder keep a light highlight, also when the focus is elsewhere.
+- **Compact everywhere.** With Compact spacing the player's quick list, the recently watched channels panel, History and the file browser get compact rows as well, and the list shown while channels load has the compact size, so nothing jumps when they arrive. The compact folder grid steps whole rows like the channel lists and never shows a cut-off row.
+- **The new default.** Compact spacing and the narrow icon menu are the starting point on new installs, on devices where these settings were never changed, and after resetting the appearance. A choice you made earlier is kept.
+- Live TV: starting the preview no longer makes the channel list jump.
+- Stepping through a channel list no longer flashes a placeholder "Live" on the focused row before its programme appears.
+
+### Side menu
+
+- **Slimmer icon menu.** The icon-only menu (Settings → Playback & interface → Appearance → Left menu → Icons only — narrow) is about as wide as a channel row, with the version at the top and the clock and date in the middle. The focused item shows its name under the icon, a little wider than the menu. The menu stands slightly away from the screen edge, so the focus frame stays fully on screen.
+- **Stays beside every page.** Auto-hide the side menu on TV (Settings → Playback & interface → TV browsing) now applies everywhere. When it is off, the menu stays next to Favorite VOD, Discover, My media, RSS releases, the TV archive, the TV guide, TMDB pages, Settings and the other full-screen pages, and each page fits whole cards into the remaining width. When it is on, these pages fill the screen as before.
+- **A working menu on Favorite VOD and Settings.** Back moves from the page to the menu; Right or OK takes you back to where you were, OK on another item opens it, and Back on the menu asks whether to exit.
+- **Instant hiding.** The auto-hiding menu now disappears and returns in one step instead of a stuttering slide.
+
+### Remote control
+
+- **Favorite VOD shortcut.** A new action opens Favorite VOD; the action that opens your TV favorites is now called Favorite TV.
+- **Discover opens Discover.** The Discover action used to open the release notes; now it opens Discover.
+- **Start timeshift** is a new action for Live TV buttons. The rewind and forward actions can now be put on Live TV buttons as well, where they seek in a running timeshift.
+
+### Phone
+
+- **Menu on every page.** The side menu in landscape and the bottom bar in portrait stay beside Favorite VOD, Discover, My media, Settings and the other pages too, with the page's own item selected. In portrait the bottom bar always shows the names; the icon-only style is for the side menu in landscape.
+- **Compact mode.** Settings → Playback & interface → Appearance → List spacing → Compact (the default): channel, group and folder rows are about two-thirds as tall and still easy to tap. In Favorite TV's folders, Select and Sort move into a channel's long-press menu, and their bar shows only while you select or reorder.
+- **Small-screen view in landscape.** With Small-screen mode in landscape (live preview) switched on (Settings → Playback & interface → Browsing), Live TV and Favorite TV open straight in the last folder when the phone is in landscape: the live preview and the folders on top, the channels below, as on TV. Back goes to the full list.
+- **The TV's quick channel list.** The player's quick list of channels and episodes is now the TV's side panel: on the left in landscape, with the picture beside it, and full screen in portrait with a close button. The panel has a stronger background, the current channel is cyan, large system fonts no longer cut off a row's second line, and the player controls step aside while it is open.
+
+### History
+
+- **One timeline.** Films, episodes and channels are in a single list by the time you opened or watched them, latest first, so the top is always what you did last. Under All, a small TV or VOD mark tells them apart; catch-up programmes count as TV.
+- **A live channel opens in its own list.** Started from History, a channel opens in its favorites folder, with the folder's name and numbering, or else in its own group, so the quick list shows that list with its guide.
+
+### Player
+
+- **Steady recently watched panel.** Moving through the recently watched channels no longer makes the selected row jump to the edge and back, and the panel lists the last 20 channels instead of 10.
+
+### Favorite VOD, Discover and files
+
+- **Watched / Unwatched with an eye.** The watched filter in Discover, Favorites and My media switches between Watched (open eye: watched titles are shown too) and Unwatched (closed eye: only titles you have not seen). The watched toggle on a film's TMDB page uses the same eyes.
+- **Favorite VOD:** the header reads Filter, Date, Any time, Genre, and Watched / Unwatched at the end. The provider line under the cards is gone, so the cards are shorter; availability is shown on the TMDB page.
+- **Simpler Discover filter.** Title age, minimum rating, minimum votes and decade are gone, and values saved earlier no longer hide anything unseen. Original language has its own drop-down after Genre, and Any time offers Last 12 months. The Filter button stays only on rows where it still has something to set (date, region, release type, provider, runtime). Series work the same way.
+- **Files:** whole-row stepping as in the channel lists, thinner rows with Compact spacing, and My media and Pin to home as buttons next to the sort instead of two rows at the top of the list.
+
+### TMDB pages
+
+- **Smoother opening on TV.** The blurred backdrop is made once, in software, so opening and scrolling no longer stutter on bigger TVs, and devices without GPU blur show it blurred too.
+- **Readable title bar.** The title bar sits on a slight shade, and on TV the scrolled list fades out softly under it instead of being cut off.
+
+## Web interface
+
+- **Interface mode** (TV or touch) moved from the Remote control page to System → Interface → Interface mode. It stays reachable from a browser, since the wrong mode can lock you out of the TV's own settings.
+- **TV spacing** offers the new Compact choice under System → Interface → TV browsing.
+
 ## 2.2.1 (2938)
 
 This release brings a jump-back button and a recently watched channels panel for the remote, fixed whole-row navigation for channel lists, the TV guide and cards (now the default), a cleaner TV look with a frame only on the focused item, and TMDB pages that open with the title's poster.
