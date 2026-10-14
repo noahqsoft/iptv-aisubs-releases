@@ -3,6 +3,64 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.3.0 (3014)
+
+This release brings fully customisable colours with your own palettes, a rebuilt TV guide with a live picture, folders and three channel lists, a one-row TV Discover with service logos, programme info that follows the focus in Favorite TV and Live TV, Discover in the side menu, and a much lighter background load on TV boxes.
+
+## App
+
+### Colours
+
+- **Change every colour.** Settings → Playback & interface → Appearance → Own colours starts from the colour scheme you use and lets you change any of its 88 colours: backgrounds, cards, accents, text, the folder and group tiles. The app shows the result as you go, and Cancel restores what you had. Remote-friendly colour grid on TV.
+- **A whole theme from five colours.** Pick a background, card, accent, AI and text colour, and the other shades are mixed from them.
+- **Your own palettes.** Save your colours under a name: they appear in the colour scheme list next to the built-in ones, and can be exported, copied and imported.
+- Brand colours (IMDb and TMDB badges), subtitle colours and the shades over videos stay as they are.
+
+### TV guide
+
+- **Live picture in the corner.** The top bar is half as tall, without ‹ Now ›, and the live picture sits in the top-right corner. By default the first OK on a channel's name shows it in the small picture and the second opens it full screen with the same player, without restarting it; until then our video logo plays there. A new setting (Settings → Playback & interface → TV browsing → TV guide live picture) starts it as soon as a row has the focus. The channel playing is marked in the grid.
+- **Stays as it was.** Back from full screen, the guide is where you left it instead of loading again, and when you change channel in full screen, the guide and the small picture follow.
+- **Folders as in Favorite TV.** The folders open in the programme panel's place: the guide opens on them, Back on the channel names brings them back, and OK loads a folder with the focus on its first channel. Back on the folders goes to the list switch, and Back there to the menu.
+- **Three lists.** A small drop-down switches between Favorites, All channels (every Live TV group of the provider, hidden groups left out) and Channels with catch-up. The guide remembers the list and the open folder for each provider.
+- **Time span on the time row.** Step up from the first channel onto the time row and change the span shown with Left/Right, from 1 to 6 hours. A long OK on a channel's name brings the guide back to now.
+- **Easier to read.** A wider channel column where long names take a second line, a taller programme panel whose description fills it, and twice as many rows with Compact spacing, on phones too.
+- **Faster start.** On a cold start, rows the stored guide covers show their programmes at once instead of waiting for the whole guide to be prepared, and "Loading EPG" shows only while a full guide downloads.
+
+### Favorite TV and Live TV
+
+- **Programme info on focus.** The panel beside the live picture shows the focused channel's programme at once, even when the picture starts only on OK, as in the guide. Settings → Playback & interface → TV browsing → Programme info beside the picture brings back the old behaviour, where the panel follows the picture. The description now fills the panel instead of stopping after two lines.
+- **Programme (EPG) in the channel menu.** A long OK on a Favorite TV channel opens the player's EPG screen for it: every programme with its full text, catch-up for past programmes and DVR recording for coming ones.
+- **Guide progress on every row** in Compact lists, not only on the focused one.
+- The "add channels" welcome screen no longer flashes up when Favorite TV opens.
+
+### Discover
+
+- **One row at a time on TV.** Discover shows a single row, with its title and picture above it and the names of the following rows below, with an arrow; the rows you passed follow the title. The filter bar keeps the row you were on.
+- **Service logos.** Rows named after a streaming service show its logo, matched against TMDB's list of about 900 services, with the service's App Store icon where there is one. The logos are stored once on the device.
+- **Minimum IMDb rating** drop-down after Genre (any, 5+ to 9+). It uses the IMDb score, and the TMDB score where IMDb has none.
+- **Watched filter:** off it reads All (open eye), on Unwatched (closed eye), in Favorites and My media too.
+
+### Side menu
+
+- **Discover in the menu,** and a new order: Library, Favorite TV, EPG, Favorite VOD, Discover, History. Opened from the menu, Back steps onto its menu item and the page stays, as with Favorite VOD; opened from the Library's tile, Back returns to the Library.
+
+### Addons
+
+- **Version and updates.** The addon list shows each addon's version, when it was last updated, and New version when the addon's server offers a newer one. The app checks once a day; Update applies it.
+
+### Performance
+
+- **Much lighter cloud sync.** A sync round no longer builds its whole package twice when nothing has changed. On TV boxes each build took up to a minute and a half of a full processor core, every few minutes, and made everything sluggish. Data with no change since the last round is checked again every 30 minutes; a sync started by hand still compares everything.
+- **No repeated name matching.** A channel whose name matches no guide entry is no longer searched for again on every request, which kept the processor busy with large guides.
+
+## Web interface
+
+- **Appearance and Colors** under System → Interface: set the colours by clicking on a picture of the app, save named palettes, export and import them.
+- **TV browsing:** TV guide live picture (on focus or on OK) and Programme info beside the picture.
+- **EPG settings:** the TV guide's time span.
+- **Integrations → TMDB:** the stored service logos can be cleared.
+- **Addons:** version, update date and the New version alert.
+
 ## 2.2.2 (2973)
 
 This release brings a live timeshift you can rewind for hours and keep as a recording, a compact TV layout with twice as many rows on screen, a slimmer icon menu that can stay beside every page, the compact layout and the TV's quick channel list on phones, a single History timeline, and a simpler Discover filter.
