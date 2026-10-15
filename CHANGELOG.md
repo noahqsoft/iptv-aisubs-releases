@@ -3,6 +3,22 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.3.2 (3026)
+
+This release makes the web interface opened inside the app on a TV roomier, with a side menu that scrolls and a Back button that closes it.
+
+## Web interface
+
+### On a TV, inside the app
+
+- **Roomier layout.** The web interface opened from the app on a TV is laid out wider, like on a laptop, and scaled to the screen, so tables and forms fit instead of breaking their headings letter by letter. Phones and browsers are unchanged.
+- **Side menu scrolls.** Pushing the pointer down at the bottom of the side menu now scrolls it, so the lower menu items can be reached.
+- **Back closes it.** The Back button leaves the web interface at once instead of stepping back through every page you opened. On a phone Back still goes to the previous page, and the close button leaves.
+
+### Progress
+
+- Cloud sync, addon import and export, and creating a backup now show their progress.
+
 ## 2.3.1 (3019)
 
 This release turns the player's Stream Info into a full diagnostics panel with health dots, lets MKV films and episodes from addons and providers play at their own refresh rate, adds an optional 50 Hz mode for TV broadcasts, and switches every device to the compact lists, FIX navigation and the narrow menu.
