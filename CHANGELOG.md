@@ -3,6 +3,35 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.3.1 (3019)
+
+This release turns the player's Stream Info into a full diagnostics panel with health dots, lets MKV films and episodes from addons and providers play at their own refresh rate, adds an optional 50 Hz mode for TV broadcasts, and switches every device to the compact lists, FIX navigation and the narrow menu.
+
+## App
+
+### Stream Info
+
+- **Everything in one panel.** The Stream Info chip in the player's top bar opens five sections: Source, Video, Audio, Network and System. A row shows only where the source has a value: a live channel has no file name or size, and with the MPV player there are no dropped frames or underruns.
+- **Source:** the addon's name, the server's host name only (never an account or password), the file name, its size and the average bitrate.
+- **Video:** resolution, frame rate, the TV's current mode with its refresh rate, codec and bit depth, the HDR type with the Dolby Vision profile and its base layer, HDR metadata (mastering, MaxCLL, MaxFALL), bitrate, decoder and dropped frames.
+- **Audio:** the track, the output (passthrough or decoded PCM), the output device (HDMI, ARC/eARC, Bluetooth, USB, speaker) and underruns.
+- **Network and System:** download speed, buffer ahead, live delay and playback path; the app's share of the CPU, memory, chip temperature and CPU clock. The system values are measured only while the panel is open.
+- **Health dots.** Measured values carry a green, yellow or red dot: dropped frames, underruns, download speed, CPU, memory and temperature. The display row turns yellow when its refresh rate does not divide into the video's frame rate, which makes pans judder.
+
+### Refresh rate
+
+- **MKV from addons and providers.** MKV films and episodes from addons (TorBox, Real-Debrid and others), Xtream series and M3U or Stalker VOD now switch the TV to their own refresh rate (24, 23.976, 25 or 50 Hz), as files from network shares already did. The frame rate is read from the bytes the player downloads anyway, without an extra request, so single-connection providers are not affected. Stream Info shows the exact value, 23.976 instead of 24.
+- **TV broadcasts at 50 Hz.** A new option under Settings → Playback & interface → Playback UI → Resolution and refresh rate: live TV and catch-up switch the TV to 50 Hz once, when playback starts, and stay there while you change channels. Broadcasts in Europe run at 25 or 50 frames per second, so motion is smooth instead of juddering at 60 Hz. The switch blanks the screen for 1–2 seconds once. Off by default.
+
+### Layout
+
+- **Compact, FIX and narrow on every device.** Updating switches every device once to Compact spacing, the narrow icon menu and FIX navigation in the channel lists, also where an earlier version had stored the old look (changing the palette alone used to store it), and in your saved appearances. A choice you make afterwards is kept.
+- **The same Discover header for every catalog.** An addon with a single catalog now gets the shared filter bar at the top with the list's title under it, like addons with several catalogs. Its buttons used to sit next to the title, on the same line.
+
+## Web interface
+
+- **Picture:** TV broadcasts at 50 Hz, with its explanation behind the "?".
+
 ## 2.3.0 (3014)
 
 This release brings fully customisable colours with your own palettes, a rebuilt TV guide with a live picture, folders and three channel lists, a one-row TV Discover with service logos, programme info that follows the focus in Favorite TV and Live TV, Discover in the side menu, and a much lighter background load on TV boxes.
