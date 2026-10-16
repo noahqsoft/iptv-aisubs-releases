@@ -3,6 +3,53 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.3.3 (3046)
+
+This release rebuilds the provider VOD grid in the Favorites style, with poster cards that show release, added and episode dates, the Discover filters and rating sorts, and a title index that makes repeat sorting fast. After every list refresh it shows what is new, down to the folder.
+
+## App
+
+### VOD poster grid
+
+- **Favorites-style cards.** Provider movies and series now use the Favorites poster grid with its S/M/L size; the poster stays the provider's. Under the title, a film shows its release date and, where the provider gives it, the day it was added; a series shows its newest aired episode and the newest one available at the provider ("Available: S2E5").
+- **The date of the details page.** A card identifies its title by the provider's own TMDB id, as the details page does, so the date on the card is the date on the details page.
+- **Chip header.** The category list has a compact chip header (count, Country, Lists, Search); inside a folder: Year, Order, Search and the Discover filters.
+
+### Order and filters
+
+- **One row per criterion.** The order menu lists Original, Title, Date, Added, Date digital, Popularity, TMDB rating and IMDb rating once each; picking the active one again reverses it, as on Favorites and Discover.
+- **Discover filters.** Time window, genre, minimum IMDb score, original language and "not watched", the same chips as on Discover.
+- **The Date order follows the cards.** Titles are ordered by the day shown on their card.
+- **Original by default, or one order for every folder.** Every device switches once to the provider's own order as the default; "For every folder" at the bottom of the order menu makes the chosen order the default of all folders. Settings and the web interface name the orders as the chip does ("Title ↑" instead of "ABC").
+- **Repeat sorting is fast.** A title index keeps what was resolved for each title. The first sort of a folder still asks the provider and TMDB; every later order or filter on it is near instant, also after a restart.
+- **Starts at the top.** A new order, filter, year or search starts the grid at the top of the new list, and the filters reset when you open another folder.
+
+### New titles
+
+- **What came with the refresh.** After a list refresh the Library tiles show how many new films and series arrived, and the folder cards their share ("757 movies · 12 new"). A filled "N new" chip at the end of the top row shows only the folders that hold something new, and inside a folder only its new titles. A series counts as new when the provider adds an episode.
+- **Got it.** "Got it" acknowledges what is there now: in the folder list for all folders, inside a folder for that folder only. Films and series are acknowledged separately, per profile.
+- **Straight to them.** When something is new, opening Movies or Series and entering a folder start on the "N new" chip, and a folder opened from the filtered list shows its new titles at once. With nothing new, the focus goes where it always did.
+- **One-time database update.** The first start after updating optimizes the channel database once; on very large lists this takes a few tens of seconds.
+
+### Navigation on TV
+
+- **Back on the menu always exits.** On the side menu, Back always offers to exit; inside a page it first steps to the page's header or switch, then to the menu.
+- **Back in the VOD grid goes to the header first**, as on Favorites and Discover.
+- **The focus stays put.** After switching provider it stays on the provider item of the menu, and opening History no longer throws it onto Library.
+
+### Details page
+
+- **Compact media info.** The media info is a small chip ("4K DV") that leaves room for the date and length; frame rate and tracks open on press.
+
+### Fixes
+
+- Titles named like "EN -4K EN -4K Title 4K (2022)" are found on TMDB again.
+- An empty answer from the provider is no longer kept for long, so the details page fills in on the next look.
+
+## Web interface
+
+- **Default title order:** every order the app offers, named as in the app.
+
 ## 2.3.2 (3026)
 
 This release makes the web interface opened inside the app on a TV roomier, with a side menu that scrolls and a Back button that closes it.
