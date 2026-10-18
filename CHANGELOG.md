@@ -3,6 +3,88 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.4.0 (3102)
+
+This release turns Favorite TV into Live TV, one place with a channel scope and a guide view that swaps only the list for the grid, on TV and phone. It adds provider groups that work as one provider, IPTV favourite movies and series, hiding of folders and channels, a refresh schedule of its own for every provider, and a TV menu you arrange yourself. It is also faster: source and subtitle searches fill in as the answers arrive, the start is lighter, and the menu's pages come back at once.
+
+## App
+
+### Live TV
+
+- **One place for live TV.** Favorite TV is now Live TV. At its top, a scope dropdown (Favorites, All channels, Channels with catch-up) and a Channels / EPG switch.
+- **Only the list changes.** In the EPG view the channel list turns into the guide's grid; the header, the folders and the live picture stay, nothing reloads. The switch shows where there are channels for the grid: in an open folder.
+- **The guide lives here.** The separate EPG menu item is gone; the remote's EPG button opens Live TV's EPG view in the current scope.
+- **Catch-up channels as a list.** "Channels with catch-up" lists the provider's channels that have an archive, played live like the others.
+- **Back on TV.** From a channel, Back goes up to the folders, then to the view switch, then to the menu. In the grid, the time row is the top.
+- **On the phone too.** The same scope and view switch at the top of Live TV, by touch.
+
+### Provider groups
+
+- **Several providers as one.** Put providers in a group and activate it: Live TV, Movies, Series and catch-up show every member's folders in one list, each marked with its provider. A folder always opens with its own provider.
+- **Across the group.** Channel search, number jump, Continue watching and Discover's "available" badge cover every member.
+- **Shared favourites.** Favorite TV shows every member's folders in one list, in the group's own order; arranging it leaves the providers' own orders as they are.
+
+### Favorite movies and series
+
+- **Per provider, beside Favorite TV.** Every provider has its own Favorite movies and Favorite series. A provider folder added there is a live link: new titles show up by themselves, with the same counts and "new" marks.
+- **Your own folders.** A film's long press offers your favourite folders, where single titles can be collected; a new folder can be made there too.
+- **One switch.** "All movies | Favorite movies" in the folder list's header, remembered per kind. Continue watching leads both views.
+- **Long press on a folder** adds it to the favourites or takes it out.
+
+### Hiding folders and channels
+
+- **Long press to hide.** On TV, a folder's or a live channel's long press offers to add it to the favourites or to hide it. Hidden items count nowhere, and nothing is deleted: the web interface restores them.
+
+### Provider refresh
+
+- **An hour of its own.** Every provider can refresh at its own hour, or not at all.
+- **Choose the parts.** Live channels, movies, series and the EPG can be refreshed or skipped one by one; a skipped part stays as it is.
+- **Expiry warning** per provider.
+
+### TV menu
+
+- **Your items, your order.** Choose which items the side menu shows and in what order, in Settings next to the Library's blocks or in the web interface. By default: Library, Live TV, Movies, Series, Favorite VOD, Discover, Live Sport, History.
+- **Movies and Series.** They open the Library's catalogue at once and show how many new titles arrived; on the favourites view, only the favourites' new titles.
+- **Live Sport.** A new place, coming soon.
+- **Everything fits.** Smaller icons at rest and full size on focus; the version number moved under Settings.
+- **Phone.** Movies and Series in the bottom bar too, and a tighter narrow side bar in landscape.
+
+### Faster
+
+- **Sources as they arrive.** The addon source list fills in as each addon answers instead of waiting for the slowest one, and up to eight addons are asked at once. An addon still searching shows "…".
+- **Subtitle search.** Subtitle addons are asked at once instead of one by one, and every source's results show as they come.
+- **A lighter start.** Favourites from another device or a backup that cannot be linked here yet are no longer retried at every start, which removes a long background sync job.
+- **Instant returns.** Going back from Favorite VOD, Live Sport or Settings is immediate.
+- **Favorite VOD.** The first opening shows placeholders until the order is ready, never an empty or half list.
+
+### Addons
+
+- **Titles without an IMDb ID** are searched by their TMDB ID at the addons that accept it.
+- **Add a release by torrent ID.** When nothing is found, a release can be added by its tracker torrent ID at an addon that offers this; a season pack lists its episodes.
+- **File size** in the ranked list and in the media info, so releases can be compared before you play or download.
+
+### Fire TV
+
+- **Updates with less space.** The update downloads straight into the system installer as a single copy, after a space check, and a failed attempt leaves nothing behind.
+
+### Fixes
+
+- Discover opened from the menu starts on its first card, also with an addon source, without the Library flashing up first; the same for Favorite VOD.
+- History opened from a page's menu or the remote goes into its list.
+- Movies and Series opened from the menu show their catalogue on the first try.
+- The AI subtitles have an even background without the banded shadow.
+- Poster cards have the same size in Favorite VOD, My media and RSS as in the VOD grid.
+- The VOD folder header no longer has a "← Groups" chip; Back does the same.
+
+## Web interface
+
+- **Provider groups** in their own submenu after Providers: create, edit, activate.
+- **IPTV movie and series favourites:** the Channels page adds VOD folders as live links, and the Favorites page has their own tab.
+- **Hide and restore channels** on the Channels page, one by one or in bulk; a hidden row is greyed.
+- **Side menu:** its items and their order.
+- **Providers:** refresh hour, parts and expiry warning per provider; the VOD customisation moved next to the VOD lists under Channels.
+- **Backup** includes provider groups, provider marks and hidden items (they can be left out); restoring adds them without removing anything.
+
 ## 2.3.3 (3046)
 
 This release rebuilds the provider VOD grid in the Favorites style, with poster cards that show release, added and episode dates, the Discover filters and rating sorts, and a title index that makes repeat sorting fast. After every list refresh it shows what is new, down to the folder.
