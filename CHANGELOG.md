@@ -3,6 +3,47 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.4.1 (3177)
+
+This release brings Live Sport: the day's matches, paired with your own channels and EPG, with a live picture, live scores, tables, player profiles and followed teams, on TV and phone. Around it, the TV menu opens over the content with its names, addons can be browsed and added inside the app, and Live TV's EPG view behaves like the channel list.
+
+## New Feature
+
+### Live Sport
+
+- **The day's matches, on your channels.** Live Sport is a new place in the menu. It reads today's matches from a sport addon and looks them up on your own channels and in your EPG: event channels named after the match, programmes naming both sides, and a tour broadcast while a match of that tour is played. Every match shows which channels carry it, best first, with the provider and the quality.
+- **A sport addon is needed.** Live Sport works with a Stremio-style addon that serves a sport catalog. Fire TV builds list one in the addon browser's Recommended row; the menu item appears once an addon is installed.
+- **Match view.** OK on a match opens it: the live picture of a channel on the right, the channels under it, and on the left a live scoreboard, the live data or the league table, switchable at the head. OK on a channel shows it in the small picture, OK again goes full screen.
+- **Live data.** Events, minute by minute, statistics, lineups with player profiles, form (last five and head to head), and the match report after the final whistle, where the addon has them.
+- **Tables and results.** League tables from the Tables chip or from a match; a side's results and its coming matches from its own menu. The tennis world rankings as a table.
+- **Follow teams and players.** OK on a name follows it; a small star marks them everywhere, and the Favorites filter shows only their matches.
+- **Filters.** Live / Today / Upcoming / Results views, a sport and league tree, your followed teams, the providers to search (all, the active one, a group, one provider) and the countries of the channels.
+- **Tennis.** ATP and WTA tours as groups, a tennis scoreboard in the row and in the match view (sets in order, the running set in the live colour), time on court from the moment the match was seen running, and tour broadcasts ("ATP/WTA Tennis") in a section of their own.
+- **Formula 1.** Race weekends as sessions with their channels, the championship standings and driver profiles.
+- **Live scores as they change.** An addon that pushes sends every change at once; the page reads the others every 30 seconds while something is live.
+- **Fast.** The channel search runs with several providers and guides at once in a window of a day and a half, and the last result is kept on disk: the page opens with it at once, even after a restart, and refreshes behind "Refreshing…".
+- **On the phone too.** The same page by touch; a match opens as its own page, the tracker goes full screen with a tap.
+
+## Added
+
+- **Addons: browse in the app.** The Addons list has "Browse addons" next to Add; it shows the same catalog as the web interface, and an addon can be added from it.
+- **Backup** includes Live Sport's followed teams, country filter and provider scope.
+- **Web interface:** a Sport page with the same matches, filters and channel lists.
+
+## Changed
+
+- **TV menu opens over the content.** On Back to the menu, the narrow side menu opens to the right with the items' names beside the icons and a soft edge; the content behind it does not move. It closes as the focus leaves.
+- **Chips.** A chip that is on has a thin frame and a yellow label; the focused chip has a thicker frame.
+- **Live TV, EPG view.** Back on a programme goes to the channel name first, then to the folders; after choosing a folder the folders stay up until OK on a channel, as in the Channels view; the programme description sits on the same card as the channel info.
+- **Channel list.** The focused row shows the running programme alone, a size larger; the next programme is in the panel above.
+- **Live Sport icon.** A trophy instead of a ball in the menu and on the web.
+
+## Fixed
+
+- Leaving Live Sport closes its channel; Live TV starts with the logo video, and no second connection is opened.
+- Back from a side's match list keeps the focus in the match view.
+- A match with only tour broadcasts starts with the live scoreboard in the picture and the focus on the first broadcast; a tour channel starts only on OK.
+
 ## 2.4.0 (3102)
 
 This release turns Favorite TV into Live TV, one place with a channel scope and a guide view that swaps only the list for the grid, on TV and phone. It adds provider groups that work as one provider, IPTV favourite movies and series, hiding of folders and channels, a refresh schedule of its own for every provider, and a TV menu you arrange yourself. It is also faster: source and subtitle searches fill in as the answers arrive, the start is lighter, and the menu's pages come back at once.
