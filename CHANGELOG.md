@@ -3,6 +3,37 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.4.2 (3193)
+
+This release brings a quick menu for the remote and a beta channel for the Fire TV build: switch it on, and new features arrive for testing before they go out to everyone. The remote's "Open main menu" now opens the menu where you are, and forced subtitles can be kept on.
+
+## New Feature
+
+### Quick menu
+
+- **Your own places, one button away.** Set any button to "Quick menu" (Remote control → Elsewhere, a long press works too). It opens a small window with the places you picked, two to a row with their icons; OK goes there, Back closes it.
+- **Pick and order the places.** Library, Live TV, the TV guide, Movies, Series, Favorite VOD, Discover, Live Sport, History, Settings and every other place of the app's navigation. Ten common ones are in it from the start; choose and order them on the Remote control screen or on the web interface (System → Remote control → Quick menu).
+
+### Beta updates (Fire TV)
+
+- **Try new features early.** Settings → Version and updates → Beta updates (on the web interface: System → Updates). Switched on, the in-app update also offers the pre-releases published here on GitHub, marked "beta"; the normal download link stays on the released version.
+- **Leaving the beta.** Switched off, a beta build stays until the next normal release passes it. Going back at once needs a reinstall, as Android does not install an older version over a newer one: make a backup first, remove the app, then install the normal release.
+
+## Added
+
+- **Live Sport on a button.** Live Sport can be set to a remote button of its own, as the other places.
+- **Forced subtitles always on.** A new switch turns on a stream's forced subtitle track (the foreign-language lines and on-screen signs) even when no subtitle was chosen, whatever its language. In the app under Language, on the web interface under Subtitles → Settings.
+
+## Changed
+
+- **"Open main menu" stays where you are.** On Live Sport, Favorite VOD, Discover and Settings the focus steps onto the page's own menu item, and the page stays open. On a title page it goes one level up, to the place it was opened from, and opens the menu there in the same press.
+- **Library from a button or the quick menu** puts the focus on the Library's tiles, not on the menu.
+- **Web interface:** the Subtitles page has a Settings sub-tab (the subtitle style moved there too).
+
+## Fixed
+
+- Opening Live Sport from the menu no longer moves the focus onto the menu's Library item a moment later.
+
 ## 2.4.1 (3177)
 
 This release brings Live Sport: the day's matches, paired with your own channels and EPG, with a live picture, live scores, tables, player profiles and followed teams, on TV and phone. Around it, the TV menu opens over the content with its names, addons can be browsed and added inside the app, and Live TV's EPG view behaves like the channel list.
