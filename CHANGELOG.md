@@ -3,7 +3,7 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
-## 2.4.2 (3193)
+## 2.4.2 (3194)
 
 This release brings a quick menu for the remote and a beta channel for the Fire TV build: switch it on, and new features arrive for testing before they go out to everyone. The remote's "Open main menu" now opens the menu where you are, and forced subtitles can be kept on.
 
