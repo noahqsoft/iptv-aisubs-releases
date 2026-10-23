@@ -3,6 +3,71 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.4.3 (3240)
+
+This release brings reminders for programmes and matches — with a DVR recording for a match — the channel changes after a list refresh, new movies and series in the Library, tennis draws and more sports in Live Sport, and a longer, more accurate TV guide from the EPG sources you add.
+
+## New Feature
+
+### Reminders (TV guide and Live Sport)
+
+- **A programme or a match, one reminder away.** In the TV guide's programme window, and in Live Sport's match view on the bell beside the start time: when it comes (at the start or up to an hour before) and what it does — an alert, or a switch to the channel at the start after a 15-second countdown. Your last choice is the next reminder's default.
+- **With the app in the background,** Android does not let an app come to the front by itself: a notification comes instead, and when you open the app it tells you the programme is already on.
+- **A match's DVR recording too.** The match's reminder window has a Recording chip: it records the match's best channel for as long as the sport usually takes (football 2:00, tennis 3:00, others 2:30), changeable from 1:30 to 4:00. When the schedule moves the match, the recording moves with it. A red dot marks the recorded matches.
+- **A Telegram message as well.** A reminder can also message your Telegram through a bot of your own: set it up on the web interface under Integrations → Telegram, linked per profile.
+- **Web interface:** a bell in the programme lists, Media → Reminders, and the reminder and recording on each match of the Sport page.
+
+### Channel changes
+
+- **What a list refresh changed.** After a provider's list is refreshed: the new channels, the gone ones (marked when they were a favourite) and the renamed or moved ones, for the last five refreshes of each provider. In the Library on the Channel changes tile; on the web interface under Providers → Changes.
+
+### New movies and series
+
+- **New movies and New series tiles in the Library:** the titles added since you last acknowledged them, whatever folder they are in, with every filter and order of the folder grid.
+- **Favourites filter on the VOD grids:** your Favourite VOD, or the titles of your favourite folders.
+
+### Tennis draws (Live Sport)
+
+- **Every running tournament, round by round.** Under the Tables chip, Tennis has the draws next to the rankings: singles and doubles, from qualifying to the final, opening on the round in play. Each match on a card with the games of every set in one line; a live match shows its live score, and OK opens the match view.
+- **From the match view.** On a tennis match the draw is the default view on the left, on the match's own round; the Draw chip beside the tournament name opens it too. On the web interface: Sport → Draws.
+
+### More sports in Live Sport, from the TV guide
+
+- **The sports the schedule does not carry** — water polo, swimming, athletics, handball, volleyball, cycling, golf, snooker, gymnastics, figure skating and more — come from your own TV guides. A programme whose title opens with the sport's name, in the guides' many languages, is a broadcast; one competition at one time, on whichever channels, is one event, with its own row in the sport chooser.
+- **One race, one row.** The same competition named in different languages ("Il Lombardia", "Tour de Lombardie", "Lombardei-Rundfahrt") is one event, and so is a channel's broadcast that two guides title differently.
+
+### A longer TV guide
+
+- **EPG days ahead, 1 to 14 days** (Settings and the web interface's EPG settings, 8 by default): how far ahead the guide is stored.
+- **The next source continues a channel.** When a channel's guide ends in one source, the next source that has it continues from there, so a short provider guide no longer hides a longer one you added.
+- **Your added sources, in your order.** On the web interface's EPG sources page each added source shows how far its guide reaches, and the ↑/↓ buttons set their order: per channel, the first source with a programme wins and the next ones continue it. The provider's own guide stays first, and it can be switched off on its own while the added sources keep matching its channels.
+
+### Always-on clock
+
+- **The time, or the date and time, always on the picture,** in the corner you choose: from the player menu or Settings → Player interface. Faint and without a box, it drifts a few pixels each minute against OLED burn-in.
+
+## Added
+
+- **Live Sport shows each event's time** in place of "Live": its start and, where the TV guide says, its end — red while it runs, with a bar of how far it is. A running match's clock or time on court stays beside its league.
+- **Live Sport lists the channels in your languages first:** the audio track's first and second language from Settings, then the rest.
+- **Live Sport offers a refresh** when the channel lists or TV guides behind it are a day old, and asks about a provider whose guide or live channel refresh is switched off; the channel search runs again after the refresh.
+- **Running tasks on the TV menu:** every refresh, download and backup in progress shows above the clock on the side menu; OK opens them with their progress and Cancel. The provider window shows its providers' refreshes on top.
+- **Web interface:** Sport → Matching lists the event channels that matched no match; the EPG "Refresh now" can refresh the active provider (or provider group) only; the IMDb ratings refresh moved under Integrations → IMDb.
+
+## Changed
+
+- **More accurate matching of the TV guides you add.** A channel's country comes first — from its name, a trailing country mark or its group — so it never takes another country's channel of the same name. Provider labels and accents no longer hide a name; a look-alike name with another number, or a "+" channel, is not taken for the channel; stand-in "No Data" programmes are left out.
+- **A channel change loads the stream once,** instead of up to three times: less work for the box's decoders and no extra provider connection while switching.
+- **A decoder that does not start says what to do:** when the device's hardware video decoder fails and no fallback can play the stream, the error suggests restarting the device if other streams fail too.
+- **Live Sport:** a tennis channel showing the match on court is listed first, a doubles broadcast is no longer a singles match's channel, and a tour's general broadcast is listed only on channels that hold the tour's rights in their area. Arabic-named event channels are matched to their matches, and F1 Academy races are no longer listed as Formula 1. The tabs are Live, Upcoming, Today and Results; the Tables menu folds by sport.
+- **Chips:** an active chip is marked by its thin frame with white text; yellow means the focused one.
+
+## Fixed
+
+- **The folder header search works again** in Movies and Series, and the Favourite movies view searches your favourite folders only.
+- **Presets no longer change the subtitle languages:** a preset describes the AI engine only; the source and target language stay as you set them.
+- **A tennis draw that failed to load** is tried again after 30 seconds instead of five minutes.
+
 ## 2.4.2 (3194)
 
 This release brings a quick menu for the remote and a beta channel for the Fire TV build: switch it on, and new features arrive for testing before they go out to everyone. The remote's "Open main menu" now opens the menu where you are, and forced subtitles can be kept on.
