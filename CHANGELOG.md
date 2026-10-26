@@ -3,6 +3,66 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.4.4 (3296)
+
+This release brings search and favourites to Live Sport — a Favorites window with each team's and player's info and news — more leagues and tables from TV listings, places beside the names, ±10 s buttons and the playback time on the picture, and a faster Xtream refresh that falls back to a backup server.
+
+## New Feature
+
+### Search and favourites in Live Sport
+
+- **Teams and players by name.** A search field beside Favorites looks through every view and league at once: "man city", "sinner" or "psg" find the team or the player, and the list shows their matches live, to come and played. The sport addon's search finds players with no match on the page too — "szobo" finds Dominik Szoboszlai · Liverpool — and the list shows his club's matches.
+- **Follow from the search.** Every team and player found has a star. A player can be followed on his own (his club's matches come with him) or with his club.
+- **The Favorites window.** The Favorites chip opens a window like Settings: Every match, All favorites and Favorite sports on top, then your Players, Teams and Sports. Picking a favourite shows its matches and switches on the views they are in (Live, Today, Upcoming, Results).
+- **Favourite sports as a filter.** + Sport adds any sport, not only those with a match now — netball, field hockey or padel too — found by typing.
+- **A favourite's info.** A long OK on a favourite offers Remove or Info. Info shows what is known of it: playing now, the next and the last match, the last results, a team's record, place and news, a player's profile and news — for a club with no match in the schedule too.
+- **Web interface:** the Sport page searches the same way, with the same stars.
+
+### More leagues from TV listings
+
+- **Matches the schedule lacks** — Serbian and Croatian leagues, lower divisions and more — come from TV listings, with the channels that show them, country by country ("TV listing: Arena Sport 1").
+- **Their league tables too,** with promotion, play-off, play-out and relegation in colour.
+- **A second opinion on the kick-off:** another source's start shows when it differs ("Other source: TDB 18:30").
+- **EuroLeague with live scores** and its table.
+- **A source chooser** (ESP, TDB, SRC, ELA, EPG): each source alone or several together.
+
+### Places and rounds
+
+- **A place beside every name** where a table or a ranking has one: a team's place in the table of the match's own competition — its league, or the European cup it plays in — and a tennis player's world ranking, "(150+)" for one outside its top 150. On the web interface too.
+- **The tennis round in the match header:** "ATP Basel · Round 1 (R32)", the qualifying rounds too.
+- **The match's own rounds on the draw chips** (QR1, R32, R16, Quarterfinal, Semifinal, Final); a tournament's full draw under Tables keeps every round, doubles too.
+
+### ±10 s and the playback time on the picture
+
+- **±10 s buttons beside Pause,** for phones above all, where there is no remote: Quick menu → Other → Controls shown on picture (off by default). On VOD, recordings, DVR timeshift and most catch-up.
+- **The playback time on the picture,** like the clock: remaining, elapsed / remaining, elapsed / total, the end, or clock / end, in the corner you choose — Quick menu → Other → Playback time on picture, or Settings beside the clock. Only where the end is known.
+
+### A faster Xtream refresh
+
+- **Only what changed is written:** a big list's refresh no longer rewrites every entry, and the movie and series lists are processed on several cores at once.
+- **A failing server falls back to the provider's backup servers,** one after the other.
+
+## Added
+
+- **Addons: a new version is shown and taken in one press.** In the addon browser (app and web) "Update" stands in place of "Installed" when the addon's server runs a newer version, and the Refresh chip says which version it brings in. Live Sport offers to update the sport addon when its server runs a newer one; Settings shows its version.
+- **Live Sport: Guide events on or off** (Settings chip): the programmes found only in your TV guides. Many of them are not live, so a new install has them off, and switching them on shows a short warning. The sources' matches are still matched with your guides.
+- **Live Sport: the Settings chip** holds the provider, the countries and the sources in one window; the league chooser narrows by typing; the chosen sports and leagues are kept per profile.
+- **Every match has a time span and a progress strip:** the guide's end when a channel's guide names the match, else the sport's usual length.
+- **Reminders:** a bell in the TV guide, and a reminder from the player's guide too.
+- **Phone: reminders and recordings with the app closed.** The exact alarm needs no permission, and Settings → Recordings / DVR → Background recording shows the notifications, the exact alarm and the battery state, each leading to its system switch.
+- **Provider groups: the Favorites folders merged by name,** like the group's other folder lists; an order you set yourself still comes first.
+- **Live Sport on TV:** a refresh or a channel search shows its progress in the In progress window, and the TV menu's progress icon turns.
+
+## Changed
+
+- **Live Sport: the match you watch stays** in the list even when it is over; it goes a minute after you pick another.
+- **Live Sport: more accurate channel hints:** from a TV listing only on the listing's own country's channels; a channel named for several matches at once comes after the sure ones; a match in your guide and in a TV listing shows under both sources, once.
+- **Live Sport on TV: a denser right panel,** so more channels fit; on phones the match header shows the surnames.
+
+## Fixed
+
+- Fixes in Live Sport, provider groups, the provider picker, the addon manager, the refresh progress and memory use.
+
 ## 2.4.3 (3240)
 
 This release brings reminders for programmes and matches — with a DVR recording for a match — the channel changes after a list refresh, new movies and series in the Library, tennis draws and more sports in Live Sport, and a longer, more accurate TV guide from the EPG sources you add.
