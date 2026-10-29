@@ -3,6 +3,81 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.4.5 (3383)
+
+This release gives Live Sport a new look with one channel list and the channels' picture quality measured and ranked, adds favourite leagues, brings the folders into the player's quick list, loads the programme info of the channel lists at once, keeps your favourites' RSS releases for later, lists History from every provider, and can start the app on boot.
+
+## New Feature
+
+### Live Sport: channel quality, measured
+
+- **In Live Sport, hold OK on a match's channel** (touch and hold on a phone) for its menu: the channel's qualities to choose from, the order of the match's channels, and **Measure their quality**.
+- **The measuring** opens each channel of the match for about two seconds and reads its picture: resolution, frame rate and bit rate (for example **1080i/25** over **4.8 Mbps**), shown at each channel's right edge. Providers are measured side by side, each within its own connections. Results are kept for 30 days.
+- **Best on top:** when the measuring ends, the list orders anew, the best picture first, focused and playing in the small picture.
+- **Channel order:** Language, Language then quality, or Quality then language (the default).
+- **Web interface:** Live Sport → **Channel order**, and a **Measure the channels' quality** button in each match's details.
+
+### Live Sport: favourite leagues
+
+- **+ League** in the Favorites window picks a league or a tour from the sports' tree — the Bundesliga in football, the ATP in tennis — with a search above it. Its chip shows how many matches it has; OK shows them, a long OK removes it.
+- **Favorite sports & leagues** marks all your favourite sports and leagues at once.
+- **A favourite and the leagues together:** with Carlos Alcaraz picked and the Bundesliga chosen, the matches of both show — one never hides the other.
+
+### Folders in the player's quick list
+
+- **Left opens the folder column** beside the channels, and every further Left goes a level up: folders → country → mode (Favorites, All channels, Channels with catch-up). OK picks, Right steps back down. A provider group's folders are merged, each with its mark.
+- **Long OK on channels and folders,** as in the channel list; on a channel, the player's programme window, where past programmes play from too.
+- **The programme beside the name** with a progress strip; the header always reads "Provider · Folder".
+- **The live quick list stays open:** OK plays a channel and keeps the list; OK on the playing channel, or Right, closes it.
+- **One list:** the folder and the channel you pick in the player are where the channel list stands when you go back, and the other way round.
+
+### Start on boot
+
+- **Settings → System & data → Boot,** at the top: **Start on boot**, off until you switch it on. The app opens by itself when the device starts up fully (after a restart or unplugging), not when it wakes from standby.
+- **Android 10 and later** let an app open by itself only with the **Display over other apps** permission. Switching on opens the system's page for it, and the line under the switch says whether the app has it.
+- **No such setting on the device (Fire OS 8)?** Grant it once from a computer: `adb shell appops set com.qsparks.iptv.aisubs SYSTEM_ALERT_WINDOW allow`
+- **Web interface:** System → Boot.
+
+### RSS releases kept for later
+
+- **Your favorites' releases are saved.** When an RSS feed lists a release of a film or series in your Favorites, it goes into a saved list as well, so it stays downloadable after the feed has dropped it. Where to watch shows it as before, marked **saved** once it has left the feed.
+- **A series, episode by episode.** In a series' episode list, an episode with RSS releases has a small RSS icon, and its ▶ source picker has an **RSS releases** row with that episode's releases only.
+- **Nightly scan.** RSS → Feeds: **Nightly scan** at an hour you choose, off until you set one. Web interface: Network → RSS.
+- **Web interface: Torrent → Saved RSS releases.** The saved releases by title: send one to a torrent client, or delete it.
+
+## Added
+
+- **TV: a navigation tip on the channel list:** Left for the folders (while watching too), Up and Down to step through the channels, Right for the quick settings while watching — and every button can be set on the web interface's Remote control page. It shows once a start until "Don't show this message again" is ticked.
+- **The clock and the playback time at the top or bottom center** too, besides the corners. At the top center they step aside while the channel info shows after a switch; at the bottom center, while the programme bar does.
+- **Live Sport: Days ahead** (Live Sport settings, and the web interface): how many days after today the matches are listed — 1, 2, 3 (default) or 7. Fewer days: a quicker page, less memory.
+- **Live Sport: a one-time tip** tells about the channel menu, at the first match with more than one channel.
+
+## Changed
+
+### Live Sport
+
+- **One channel list.** The list beside the matches and the match view's channels work the same now: OK puts a channel in the small picture, OK again plays it full screen through it.
+- **An info box over the small picture** with the match's few facts; OK on it lists every TV channel showing the match.
+- **The page's head:** a cup instead of the title, Settings by its icon; the search moved into Favorites (**+ Player**, **+ Team**).
+- **CH+/CH− steps through the match's channels** when you start one from Live Sport, and the quick list shows them too.
+- **Picking a whole sport keeps your leagues:** marking football keeps the leagues you picked in it, and they come back when football is unmarked.
+- **The league and the Favorites chips keep their width:** a long name shortens, its "+2" stays.
+- **Listed channels under their other names too:** a channel a TV listing names one way and your list another, or only by its guide ID.
+- **A tennis draw opens at the running match.**
+- **On phones:** upright, a match's page has the small picture on top and the channels under it; on its side, the first tap shows a match on the right with its picture, the second opens its page.
+
+### Elsewhere
+
+- **The programme info of the channel lists loads at once,** for every row in view together — in the quick list too, much faster.
+- **A stale TV guide asks first:** browsing no longer downloads every outdated guide quietly; a window asks (Refresh now, Not now, Not today) and names the provider. The nightly round no longer gets stuck on a provider that does not answer.
+- **History lists the channels of every provider of your profile,** the latest first, each with its provider's mark. The player's recent channels list shows the same channels.
+- **Web interface: addons in groups** (sources, catalogs, subtitles and more), each in an order you set; the source list and the subtitle results follow that order.
+- **The player's TV lists have a darker shade,** easier to read over a bright picture.
+
+## Fixed
+
+- Live Sport, phone preview picture, web interface Changes page
+
 ## 2.4.4 (3296)
 
 This release brings search and favourites to Live Sport — a Favorites window with each team's and player's info and news — more leagues and tables from TV listings, places beside the names, ±10 s buttons and the playback time on the picture, and a faster Xtream refresh that falls back to a backup server.
