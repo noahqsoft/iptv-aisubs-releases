@@ -3,6 +3,50 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.5.0 (3404)
+
+This release makes getting around smoother on TV and phone: the hidden side menu comes over the picture on every page, phones get the TV's channel navigation, the folder column gets a provider level, Live TV offers to match the screen's refresh rate to the broadcast, and Live Sport's favourites switch by section.
+
+## New Feature
+
+### Live TV: refresh rate matched to the broadcast
+
+- **Live TV measures the broadcast's frame rate** while it plays. When it does not sit evenly on the screen's refresh rate, a window asks: **Match the refresh rate?** — for example **Switch to 50 Hz** for a 25 fps broadcast on a 60 Hz screen.
+- **Don't ask again:** ticked with the switch, it matches without asking from then on; ticked with **No**, it stays off.
+- **A yes is kept per channel:** the next time that channel starts, the switch comes with the loading.
+- **It asks sparingly:** 5 seconds after a channel switch, never over an open menu, and after a No not again for the same rate while the player stays open.
+- **Settings → Playback & interface → Resolution and refresh rate → Live TV and catch-up:** Ask first (the default), Match automatically, or Off. Also in the player's quick settings (Other) and on the web interface (System → Picture). TV only.
+
+### TV: the hidden side menu, over the picture
+
+- **Auto-hide the side menu on TV** now hides the menu on every page, Movies and Series too.
+- **Back at a page's top, or a long Back anywhere,** brings it over the current picture, as the quick menu does: the page does not move aside, and the screen does not change — on Live Sport, Favorite VOD, Settings and Discover too.
+- **It hides again** as soon as the focus leaves it. Back on the menu still asks whether to exit.
+
+### Phone: the TV's channel navigation
+
+- **The small picture upright too:** Live TV and Favorite TV have the live picture on top of the channel list in portrait as well, as Live Sport does.
+- **Folders with a swipe right** on the channel list: under the picture in portrait, on the left beside it in landscape. Swipe right again for the TV's levels (country, mode, provider), left to go back. Live TV and Favorite TV open in the last folder; the full-page folder view is gone.
+- **Favorite folders:** a long press in the folder column gives the TV's menu — Move up, Move down, delete.
+- **The player swipes like the TV's arrow buttons** on a live channel: from the left for the quick list, from the right for the quick settings (before: a swipe up), up and down to change the channel. A live channel you can rewind seeks with a sideways swipe, as on TV.
+
+## Added
+
+- **A provider level in the folder column:** past folders, country and mode, one more Left lists your providers — in the channel list and in the player's quick list.
+- **Live Sport: favourites switch by section.** The top row of the Favourites window has a chip for each section — **Players, Teams, Sports, Leagues** — that turns its whole section on or off. Before them, **All favorites** turns every section on; while any favourite is on, it reads **Clear** and resets the page: no favourite picked, and All sports again, whatever the page's own sport chip had picked. Each section's **+** stands right after its title, and favourites still switch one by one.
+- **Live Sport: IPTV** in the views menu (Live, Today, Upcoming, Results): ticked, only the matches with a channel found in your lists show. "· IPTV" on the chip shows it is on, until the app restarts.
+- **Live Sport, tennis: each set's loser in red.** A finished set's loser's games are red and the winner's light, whoever won the match — in the match rows and on the draw's cards.
+
+## Changed
+
+- **Deleting a provider runs in the background.** The window has a **Run in background** button (Back closes it too), and the menu bar shows where the deletion is, step by step, with counts — for example "Removing movies (3/5)". Deleting from the provider's page or from the web interface shows the same.
+- **Live Sport's Favourites window:** the section chips replace the Every match, All sports and Favorite sports & leagues chips.
+- **The "TV broadcasts at 50 Hz" switch** gave way to the refresh rate matching above; where it was on, Live TV now matches automatically.
+
+## Fixed
+
+- Favorite TV on phones
+
 ## 2.4.5 (3383)
 
 This release gives Live Sport a new look with one channel list and the channels' picture quality measured and ranked, adds favourite leagues, brings the folders into the player's quick list, loads the programme info of the channel lists at once, keeps your favourites' RSS releases for later, lists History from every provider, and can start the app on boot.
