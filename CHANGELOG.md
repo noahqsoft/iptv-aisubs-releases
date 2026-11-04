@@ -3,6 +3,61 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.5.1 (3479)
+
+This release completely renews AI subtitles and voice-over: switching them on no longer stops the picture, and within about 3 seconds the translated subtitles and voice-over arrive and catch up with the picture by themselves — on live TV, provider movies and downloaded files alike, on single-connection accounts too. Arabic arrives as a new language, laid out right to left, and Multiview works over the connection limit.
+
+## New Feature
+
+### Renewed AI subtitles and voice-over
+
+- **No interruption.** Switching AI subtitles or voice-over on no longer stops or delays the picture: in about 3 seconds the first translated line arrives, and the voice-over catches up with the picture by itself.
+- **Movies and downloads too.** On provider movies and series, downloaded files and your own media, AI starts just as fast, and again quickly after seeking.
+- **No extra connection.** The AI listens to what the player already receives, so it works with providers that allow only one connection: live TV on HLS and TS, and provider movies, HLS included.
+- **No buffer to set.** The app keeps the head start the translation needs by itself; the AI buffer setting is gone.
+- **Prefetch for an instant start** (AI settings → **Prefetch without AI too**, on by default): with an AI provider set up, the app keeps a little audio ready even before AI is on, so the translation starts at once. It can be switched off.
+- **Sync indicator.** Right after the AI countdown, a small **Syncing…** label shows how far the voice-over (or the subtitles) trails the picture, as measured, and **In sync** once it has caught up. Within the first minute it comes back if the voice-over falls behind again; after that it stays away. It follows the **AI warm-up status** switch.
+
+### Arabic, right to left
+
+- **Arabic interface.** The app can be switched to Arabic, and the whole layout is mirrored: the side menu, the folder column and the quick list stand on the right, and Left and Right on the remote follow what the screen shows. Seeking, the playback bar and the TV guide's timeline stay left to right. Numbers use Latin digits. The web interface stays left to right and is still mostly in English.
+- **Film data in Arabic.** Titles, descriptions and the rest of the film data can be shown in Arabic.
+
+### Multiview over the connection limit
+
+- When the account allows fewer connections than the Multiview has tiles — even just one — the tiles take turns, and between their turns each keeps playing what it has already loaded. The turn time can be set.
+
+## Added
+
+- **Keep AI on when switching channels.** A new switch keeps AI running on the next channel: in the player's Quick settings → Presets, under AI subtitles & voice, and in the AI settings of the app and the web interface. Off by default.
+- **Quick settings: original volume under the voice-over.** In the player's Quick settings, under AI output, a slider sets how much the original sound is lowered while the voice-over speaks, adjustable while watching. It shows only with voice-over on.
+- **WebUI: film data language.** It can now be set on the Preferred languages page too.
+
+## Changed
+
+- **Voice-over keeps up.** It starts together with the speech, reads faster while it is behind — up to 1.7× until it is first in sync, 1.55× after — and the silence around each sentence is trimmed.
+- **Speaker voices.** Each speaker keeps their voice more reliably, and male and female voices are told apart much more accurately.
+- **Subtitles and voice-over in sync with the speech,** with the Gemini and OpenAI translators too.
+- **Changing the translator** during playback brings the voice back in a few seconds instead of about half a minute.
+- **Soniox v6.** The new Soniox real-time model: more accurate recognition, speaker separation and translation.
+- **AI models.** Newer Gemini and OpenAI models replace the ones being retired; a retired model in your settings or presets switches to its successor.
+- **Live TV plays HLS by default** where the provider offers it, so switching AI on or off or changing channels no longer jumps between TS and HLS. A TS choice you made for a channel stays; the provider default is called **Automatic (prefer HLS)**.
+- **Live TV: AI never delays the picture.** It no longer falls back to the delayed relay on its own; where it cannot listen in, AI stays off and the banner says why.
+- **Single-connection accounts:** when the provider still counts the previous channel, the player shows **Provider busy, waiting…** and tries again, instead of an error.
+- **On phones, upright:** subtitles sit under the picture, and the channel card and programme bar stay clear of the camera cutout and the navigation bar.
+- **Provider movies and series: no translation of the stream's own captions (CC) for now.** AI stays off and the banner says so; AI subtitles from the audio work as above.
+
+## Fixed
+
+- AI subtitles and voice-over start
+- Channel switching on single-connection accounts
+- AI on 5.1 audio
+- Channel list with many hidden groups
+- Gemini and OpenAI translation
+- Chinese and Japanese translation
+- Arabic and Hindi AI subtitles
+- Live AI after switching channels
+
 ## 2.5.0 (3404)
 
 This release makes getting around smoother on TV and phone: the hidden side menu comes over the picture on every page, phones get the TV's channel navigation, the folder column gets a provider level, Live TV offers to match the screen's refresh rate to the broadcast, and Live Sport's favourites switch by section.
