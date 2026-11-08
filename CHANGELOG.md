@@ -3,6 +3,76 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.5.2 (3534)
+
+This release adds skip intro and recap for series, channel switch info that can be smaller, a transparent control bar, folders in your provider's own order, and an up-to-date Live Sport list with channels you can assign by hand. The app's code is also leaner, and files on more network shares (SMB) now play.
+
+## New Feature
+
+### Skip intro and recap in series
+
+- While an episode's intro or recap plays, a button shows in the corner of the picture; on a TV remote, OK presses it. The times come from the community database of TheIntroDB (theintrodb.org), so not every episode is known.
+- Settings → Playback & interface → Playback UI → **Skip intro and recap**: With a button, Automatically or Off; also on the WebUI's System → Playback page.
+
+### Less in the way of the picture
+
+- **Channel switch info: size and position.** The channel card at the top and the programme bar at the bottom that show when you switch channels now come in three sizes (Large, as before, Medium and Small) and three positions (left, centre, right). Player quick settings → Display → Info shown on channel switch; also on the WebUI's System → Playback page.
+- **Transparent control bar.** The player's bottom bar can drop its dark panel: only the controls keep a light background, and the focused button gets a stronger highlight. Player quick settings → Display → Controls shown on picture → Control bar; also on the WebUI's System → Playback page.
+
+### Folders in your provider's order
+
+- Live TV, movie and series folders now come as the provider sends them: an Xtream panel's or a Stalker portal's category order, an M3U file's own order. A–Z is still there: Settings → Favorites and lists → Provider folder order, or Folder order on the WebUI's Channels page.
+- **M3U: Live TV only.** A switch in an M3U provider's settings: every entry of the list is a live channel, whatever its folder is called.
+
+### Live Sport
+
+- **An up-to-date list on opening.** Opened hours later, Live Sport no longer shows last night's matches as live: a panel checks the events at once. When several matches are past their time, the list is refreshed, and an entirely outdated list stays blurred until it is done. After a short break the list is simply shown.
+- **Assign a channel by hand.** "Assign a channel" at the end of a match's channel list picks one of your channels for the match, or for every match of its league. It stands first under the match; a long OK on it removes it. Also on the WebUI's Sport page.
+- **More channels for a match.** Channels whose program guide comes by name — for example a 4K feed without an EPG id — now appear among a match's channels, with their TV listing, and rank by their measured quality.
+- **Stadium background.** The page has a softly blurred stadium behind it.
+
+## Added
+
+- **Actors and directors: In my list.** A chip in the filmography window keeps only the movies and series your provider has.
+- **My media: genre filter.** A Genre chip beside the others, remembered separately for movies and series.
+- **Discover: addons' own titles.** An addon's catalog in Discover also shows the titles that have no TMDB page, such as live channels, with the addon's own poster and name.
+- **Programme picture in the EPG window.** When your XMLTV source gives a picture for the programme, its window shows it. The window is wide now, and its text scrolls with the remote.
+- **Favorite TV star in the folder columns.** A provider folder that is already in Favorite TV gets a star in the folder column of the quick list and of Live TV, and a long OK on it offers Remove from Favorite TV.
+- **AI keys checked when you save them.** A key saved in Settings → AI subtitles & voice-over or on the WebUI's API keys tab is tried with its service right away, and the answer shows under the field.
+- **AI prefetch switch in the reserve panel.** While AI keeps the picture downloaded ahead, the player's network reserve chip shows "AI", and its panel has the Prefetch without AI too switch.
+- **Stream info on a remote button.** A new action in Settings → Playback & interface → Remote control → Customize remote buttons: during playback it opens the Stream info panel.
+- **Optimization notice after an update.** On the first start after an update the app's code is still being optimized, and until then the picture can stutter. A panel shows what is still running and closes when it's done.
+- **Network share errors: technical details.** When a file on a network share fails to play, the error screen shows what the share negotiated, how long opening and reading took, and the last error. A photo of it is enough to find the cause.
+- **WebUI: remove a group from favorites.** On the Channels page a group that is already in favorites offers Remove from favorites instead of To favorites, and an opened group has the same button in its heading.
+
+## Changed
+
+- **Full code optimization.** The app's code is optimized more thoroughly when it is built: about 16% less program code and half as many classes to load.
+- **Voice-over keeps a steadier pace.** After catching up with the picture it no longer slows down below 1.1×, so it doesn't drag after a fast stretch.
+- **My media and RSS: filters in the header.** Every filter is its own chip now, as elsewhere in the app; the Filter window is gone. Decade (both pages) and Title age (RSS) were removed.
+- **Provider series: wider episode window.** An episode's info window is as wide as for TMDB series, with TMDB's picture and description first and the provider's as a fallback.
+- **Episodes in English when untranslated.** If TMDB has no description or title in your language, the English one is shown.
+- **Player quick settings: the Other tab is now Display.**
+- **Help follows the current app,** with new chapters on the folder column and side menu, quick settings, Discover, addons and Live Sport; in English and Hungarian.
+- **WebUI: "New addon" is now "Install addon",** and the Help page points to Settings → Web interface for the address and QR code.
+- **The advanced reserve range (target and tolerance) is off for now;** a saved setting no longer applies.
+
+## Fixed
+
+- Playback from network shares (SMB)
+- EPG download
+- Live HLS playback
+- Live AI on TS streams and on TS/HLS switching
+- Channel navigation in Live TV and the side menu
+- Picture stalls during playback and when AI subtitles start
+- Folders on tablets and phones in the EPG grid view
+- The last list and channel when you come back to the app
+- M3U film and series detection
+- Forced subtitles
+- Window buttons on narrow screens, refresh progress on phones
+- Translations in the folder menu
+- WebUI
+
 ## 2.5.1 (3479)
 
 This release completely renews AI subtitles and voice-over: switching them on no longer stops the picture, and within about 3 seconds the translated subtitles and voice-over arrive and catch up with the picture by themselves — on live TV, provider movies and downloaded files alike, on single-connection accounts too. Arabic arrives as a new language, laid out right to left, and Multiview works over the connection limit.
