@@ -3,6 +3,52 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.5.3 (3561)
+
+This release translates image subtitles (Blu-ray PGS and DVB) with AI, adds a per-channel volume boost up to +12 dB, and moves a provider whose main server fails to a working backup server in full. On the WebUI, favorites can now be carried over to another provider, and Live Sport switches providers faster.
+
+## New Feature
+
+### AI translation of image subtitles
+
+- Blu-ray subtitles in MKV files (PGS) and the DVB subtitles of live broadcasts are pictures, so until now they could not be translated. The subtitle translator's own service (Gemini or OpenAI, with your key) now reads the picture first, and the text goes on to the usual translation. No extra library is added: the picture goes where the subtitle text already went.
+- Pick the image track in the Subtitles menu, then the AI translation as before; the track is marked "Image subtitle (OCR)". A two-line subtitle sent as two pictures is translated as one.
+- Teletext subtitles are not supported: neither player engine can decode them.
+
+### Volume boost up to +12 dB
+
+- For channels and films that are too quiet: the audio (♪) menu → Volume boost offers Off, +3, +6, +9 and +12 dB. Like the aspect ratio, it can be remembered for the channel, and one value can be the default for every channel without its own.
+- A limiter keeps loud parts from distorting, and the ♪ button shows the boost while it is on.
+- With Dolby audio (AC3, E-AC3) the app decodes the sound itself while a boost is on: a receiver gets PCM instead of Dolby, and surround over ARC becomes stereo. Without a boost nothing changes.
+
+### Backup servers
+
+- **A full switch.** When a provider's main server fails at a refresh (it refuses, gives a server error or does not answer), the provider moves to a working backup server: the channel list, the TV guide and the channels all come from there. The backup becomes the main server and the failed one a backup; favorites and History stay.
+- **A channel that does not start opens from a backup.** The player quietly tries the backup servers, and the one that works becomes the main server. Not with the AI relay or the MPV engine.
+- **Servers checked at every refresh.** At the nightly refresh the quickest server becomes the main one; at a manual refresh only when it is clearly quicker. The backups are ordered by speed.
+
+## Added
+
+- **WebUI: favorites transfer.** Favorites → Transfer carries a provider's Favorite TV folders to another provider, for example to a new subscription. Lists of the same service go over exactly; with another provider the folders are paired by name, and a list shows what paired before anything is written. Nothing is deleted.
+- **WebUI: favorites file.** A provider's Favorite TV folders can be saved to a file, without the provider's address, account or stream links, and loaded onto any provider later.
+- **WebUI: server status and notes.** Each server in a provider's form shows its login time, its last success and its last failure, and can hold a note.
+- **Stream Info: the stream's measured bitrate.** A new row shows the stream's real data rate over the last 30 seconds; the Download speed row is the speed of your line, not of the stream. The Playback path row now shows only with the AI relay.
+
+## Changed
+
+- **Live Sport: faster provider switching.** After a provider switch, the channel search reads only the new provider's part of the TV guides, and switching back to a provider searched shortly before shows its result at once.
+- **Phone: folders by swipe in the EPG view.** A swipe right on a channel's name opens the folder column, in Favorite TV too; a further swipe goes up a level, up to the providers.
+
+## Fixed
+
+- TV guide and EPG download
+- History and recently watched channels
+- Programme info in the player
+- Live Sport
+- One-connection accounts
+- AI subtitles
+- Subtitle track names
+
 ## 2.5.2 (3534)
 
 This release adds skip intro and recap for series, channel switch info that can be smaller, a transparent control bar, folders in your provider's own order, and an up-to-date Live Sport list with channels you can assign by hand. The app's code is also leaner, and files on more network shares (SMB) now play.
