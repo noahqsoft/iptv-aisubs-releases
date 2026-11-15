@@ -3,6 +3,82 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.5.4 (3639)
+
+This release adds a search window to Live TV, favourites in three orders — Original, ABC and Custom — that you can arrange everywhere, and an Edit window to hide countries and folders and to arrange your favourites. Phones play Dolby, DTS and MP2 sound, films can jump to the scene after the credits, a crash report shows as a QR code on TV, and live AI voice-over gets in sync sooner, with less lag.
+
+## New Feature
+
+### Live TV: search window
+
+- "Search" in the Live TV header opens a window that searches every provider's channels and folders by name. "Search in" chooses the providers, and your earlier searches stand as buttons: one press searches again.
+- OK on a channel plays it in the small picture on the right. OK on it again asks: open it, or add it to your favourites — an existing favourite folder or a new one.
+- A found folder opens to its channels; "The whole folder to favourites" adds it at once.
+- Hidden folders and channels stay out, as in the list, unless "Show hidden" is on. The search window takes the place of Live TV's channel filter; Favourite TV keeps its filter.
+
+### Favourites: Original, ABC and Custom
+
+- Three orders for favourite folders and their channels. Original starts in the order they were made, and you can arrange it — it stays Original. ABC is one button whose arrow shows the direction; press it again to turn it round.
+- Moving something while ABC is shown makes a new Custom order from the ABC order. Custom keeps its own arrangement until the next move in ABC replaces it.
+- Arrange in whichever order is shown: the folder and channel menus on TV, "Arrange by hand" on a phone, the player's quick list, the Edit window and the web interface. Settings and the web interface list the orders as Original, ABC ↓ (A–Z), ABC ↑ (Z–A) and Custom.
+- The arranged Original order syncs between devices that have this version; an older one keeps its own Original order.
+
+### Edit window: hide and arrange
+
+- Live TV, Favourite TV, Films and Series have an "Edit" button in the list header: a wide window with two lists. "Full list" hides folders: the shown ones on the left, the hidden ones on the right. "Favourites" manages your favourites — the same favourites as everywhere else.
+- A "Countries | Folders" switch lists the folders by country or as one list. Tap a name to open it; the button beside a row moves a whole country or a single folder, and "All" moves a whole side. On Live TV, open a folder to move its channels one by one.
+- In Favourites with Folders, the right side is your favourite list, in the same order as outside: ↑ moves a folder to the top, ↓ to the bottom, and OK on its name picks it up so the remote's up and down carry it until the next OK. › opens a folder to arrange its channels the same way. Films and Series favourites can be arranged too.
+- A provider choice at the top switches to another provider's lists. There is no Save or Cancel: leaving the window, or switching provider, asks whether to save your changes.
+- "Show hidden" brings the hidden folders back for now, and your edited list stays as it is.
+
+### Phones: Dolby, DTS and MP2 sound
+
+- Channels and films whose audio the phone cannot decode now play with sound: MP2 on many raw broadcast channels, Dolby (AC-3, E-AC-3), DTS and TrueHD. Before, they were silent, with "No audio tracks available".
+- Devices that decode these formats themselves, like most TV boxes, keep doing so; Dolby passthrough over HDMI is unchanged.
+
+### Films: jump to the extra scene after the credits
+
+- During a film's credits, a "Skip to the extra scene" button appears where TheIntroDB knows when the credits end. It is always a button, even when skipping is set to automatic, so slightly wrong community times can never skip the ending.
+- Where only a credits addon knows of a scene, a short reminder shows instead. It is switched off together with "Skip intro and recap".
+
+### Crash report as a QR code on TV
+
+- After a crash, the next launch shows the report, on a TV also as a QR code: scan it with your phone, and the report opens on the project site, ready to copy or share. The app sends nothing — the report travels in the part of the link the browser does not send — and addresses and file names are left out of it.
+
+### EPG refresh, with a choice of what to update
+
+- The EPG view's header has a refresh button (⟳). The provider's Refresh and the ⟳ button open a chooser: channel list, movies, series, the provider's EPG and each added EPG in its own row.
+
+### Live Sport: assigning a channel with search and preview
+
+- The manual channel assignment opens in a wide panel: search by any part of the channel name, choose which providers to search, and check a match in the small picture before you assign it. The WebUI's assignment page has the same search.
+
+## Added
+
+- Hidden folders and channels are per profile, like favourites, and can sync too, as an option per profile (off by default).
+- Profile menu: "Add new profile".
+- Country filter: country and language names and platforms (Netflix, HBO, Disney…) are recognized in folder names without a country mark, and Arabic folders go under AR.
+- A remote button action, "List: back to the last watched channel": the list goes back to the channel in the small picture, in the list you watched it from.
+- Cloud sync pairing: the TV's QR opens the phone app directly and carries the sync storage settings; cloud sync shows detailed progress and has a Stop button.
+- AI translation with context: with an external translator (OpenAI or Gemini), each sentence goes with the two before it, only to help understand it (about 20% more input tokens; on by default, switchable).
+- The player's recently watched channels show their provider's mark, in a wider panel.
+- WebUI: a switch for the app's hidden groups; favourites transfer to several groups of the new provider.
+
+## Changed
+
+- Cloud sync recognizes an Xtream provider by its name and user name, no longer by its server: favourites come across even when two devices use different main servers. Update every device that syncs: an older version does not receive Xtream favourite changes from this one until it is updated.
+- Live AI voice-over gets in sync sooner and lags less: it builds its lead before it starts, a long sentence goes to the translator at a comma, and each speaker gets their own voice more reliably. Subtitle voice-over pauses with the picture.
+
+## Fixed
+
+- Stability
+- Cloud sync
+- Live AI
+- Voice-over
+- Small picture
+- Live TS playback
+- Channel list after History and Favorite TV
+
 ## 2.5.3 (3561)
 
 This release translates image subtitles (Blu-ray PGS and DVB) with AI, adds a per-channel volume boost up to +12 dB, and moves a provider whose main server fails to a working backup server in full. On the WebUI, favorites can now be carried over to another provider, and Live Sport switches providers faster.
