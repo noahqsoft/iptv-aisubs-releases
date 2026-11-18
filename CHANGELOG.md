@@ -3,6 +3,97 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.5.5 (3709)
+
+This release rebuilds Multiview — up to twelve channels, saved layouts you can also edit on the WebUI — shows a channel's quality variants as one row, and makes the TV guide many times faster. A live channel reloads by itself after a stream error, Settings open over the playing picture, M3U lists play DRM-protected channels, a subtitle you pick comes on without stopping the film, and the app is fully translated in every language.
+
+## New Feature
+
+### Multiview, rebuilt
+
+- Start it from the channel playing, or continue a saved layout by its name.
+- Up to twelve channels: from seven on, the small pictures stand beside and below the highlighted one.
+- The focused picture has the sound and its own quality choice.
+- ECO settings: how many channels keep moving and how often the still ones refresh. The last layout and every named one keep their own.
+- On leaving, the chosen picture grows from its place to full screen and plays on in the same player.
+- Adding a screen opens the channel picker in your favourites.
+- WebUI: the saved layouts can be edited in the browser too — the same named layouts as in the app, with the starting focus, the enlarged screen and the ECO settings. If a layout changed after you opened it, the editor says so instead of overwriting it. The channel picker can start in All channels instead, per profile.
+
+### Quality variants as one row
+
+- Providers often list a channel in several qualities one after another ("Rai 1 4K", "Rai 1 HD", "Rai 1 SD"). The channel lists now show them as one row, with the qualities after the name: in Live TV's provider folders, in Favorite TV and in the player's quick list.
+- The provider's own word stays ("UHD" beside "4K"). A name without a quality mark joins its marked variants as "Basic", and a quality listed twice is numbered ("HD · HD 2").
+- The row plays your preferred quality: Best, Up to FHD, HD or SD, in the player's quick settings, in Settings › Playback & interface and on the WebUI under Picture. "Best" stops at FHD on a device that cannot decode 4K. A quality you pick by hand is kept for that channel.
+- A quality button at the top of the player, after the aspect ratio, switches between the variants, in Live Sport too. When a variant gives no picture, the next one starts by itself, with a short note.
+- CH+/CH− passes over the variants of the channel playing and lands on the next channel's preferred quality.
+
+### Automatic reload after a stream error
+
+- A live channel that was playing and stops with an error no longer waits on the error panel. The app first retries on the spot, with the last picture kept on screen, then reloads the channel with a fresh link, as Retry does.
+- Up to three automatic reloads per channel in ten minutes; after that the error panel shows as before.
+
+### A much faster TV guide
+
+- Each guide source is stored in a file of its own, read and written at the same time. On a TV box a large provider guide (about 290 000 programmes) now refreshes in about 30 seconds instead of several minutes, and it stays quick while you watch.
+- The first start after the update clears the old guide data once, on the startup screen, with its progress shown. The guides then come with their next refresh: at dawn, or right away with the refresh button.
+
+### TV guide storage: full, or favourites and visible channels only
+
+- A new "TV guide storage" choice in Settings → TV guide, in the refresh window, in Live Sport's settings and on the WebUI's EPG settings page: keep every channel's programmes (as before), or only those of your favourite channels and/or the visible ones (neither the channel nor its folder hidden). A hidden channel keeps no guide unless it is a favourite.
+- The whole guide is still downloaded; the other channels' programmes are skipped, so the guide files stay smaller and the refresh is shorter.
+- Changing it offers to refresh the guide right away.
+- Live Sport: the matches come from the sport addon and stay, but on a hidden channel no match is found in the TV guide.
+
+### M3U: DRM channels
+
+- Channels of an M3U list protected with Widevine, PlayReady or ClearKey (#KODIPROP licence lines) play. AI subtitles, recording and Multiview are not available on them yet.
+
+### Edit from the long-press menus
+
+- Every folder's and channel's long-press menu has an "Edit" row: in Favorites, in All channels and in the player's quick list.
+- It opens where you were. From Favorites: in the favourites' own folder list, at the folder, or with a channel's folder open, at the channel. From All channels: on the favourites side, at the folder, or among the folder's channels, at the channel, to put them into the favourites.
+- In the player the window opens over the picture, and the film plays on.
+
+### Own subtitles without stopping the film
+
+- A subtitle picked from the search or from your own subtitles comes on the picture the way a stream's own subtitle does: the window closes at once, the film plays on, and another pick replaces it the same way.
+- Provider films and series, debrid and network-share (SMB) files. DASH and DRM-protected streams still reload once.
+
+### Complete translations
+
+- The app and the WebUI are fully translated in every language. Until now many texts fell back to English.
+- Misleading translations were corrected, and the form of address is now consistent within each language.
+- Português (Portugal) is a separate app language beside Português (Brasil). On first start a Brazilian device gets Português (Brasil) and every other Portuguese device Português (Portugal); a language you chose earlier stays.
+- The What's new notes and the user guide stay in English.
+
+## Added
+
+- Settings open in their own window over the current screen, from the quick settings and from a remote key set to open Settings, in the player too. The picture keeps playing, and closing the window returns the focus where it was.
+- Player: a Reload button reloads the stream without leaving the channel; a remote key can be set to it too.
+- Pause live TV: Play/Pause sits in the middle of the controls, and pausing live TV continues in timeshift.
+- Live TV: the EPG refresh button in the channel view too, with the same choices as in the EPG view.
+- Live Sport › Assign a channel: the small picture shows the stream's resolution, frame rate and bit rate. The bit rate is measured; on a TS stream it comes a few seconds after the start.
+
+## Changed
+
+- A provider's server change keeps its TV guide. When a provider moves to another server (a backup taking over, a quicker one chosen at night, one set by hand), its guide stays, and the next refresh downloads it from the new server: no more question, no full download.
+- Live TV starts and switches providers much faster, most of all with large providers: Favorite TV no longer loads the provider's whole channel list first. Channel switching does less work in the background, so the new channel starts loading sooner.
+- Saving the favourites from the Edit window is much faster on large lists, with a small "Updating favourites…" note, and cloud sync handles large favourite lists several times faster.
+- Live Sport › Assign a channel stays open after a channel is assigned. Assigned channels are marked, and back on the match the focus lands on the list's first row, where the assigned channel stands.
+- Every language list starts with English, then the app's language, then all the others in alphabetical order, in the app and on the WebUI alike.
+- The long-press menus fit the screen: on a short screen the rows move closer, and if they still do not fit, the list scrolls. The live folder menu no longer has "Open history".
+- Timeshift: OK opens the whole control row, with the focus on Play/Pause.
+
+## Fixed
+
+- Timeshift controls
+- Favourite folder sync
+- Channel list under the player
+- AI subtitles
+- Settings
+- Channel switching
+- Live Sport
+
 ## 2.5.4 (3639)
 
 This release adds a search window to Live TV, favourites in three orders — Original, ABC and Custom — that you can arrange everywhere, and an Edit window to hide countries and folders and to arrange your favourites. Phones play Dolby, DTS and MP2 sound, films can jump to the scene after the credits, a crash report shows as a QR code on TV, and live AI voice-over gets in sync sooner, with less lag.
