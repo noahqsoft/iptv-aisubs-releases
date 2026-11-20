@@ -3,6 +3,108 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.6.0 (3786)
+
+This release rebuilds Settings — the WebUI's menu with a search, and much that could only be set in the browser now on the TV too — and the player's Quick settings. The player buttons are arranged on a picture of the screen, separately for live TV and films; Right on a channel shows its programme list; channel search comes to Settings with the stream's quality; and manual EPG matching lets you pick the source. Live Sport, the "Live" guide rows and large provider refreshes are much faster.
+
+## New Feature
+
+### Settings, rebuilt
+
+- The app's Settings follow the WebUI's menu, grouped by use: IPTV, Addons & TMDB, AI subtitles & voice-over, Playback & picture, Interface & controls, Network & integrations, Profiles & device, and Languages at the bottom.
+- Pages that could only be managed on the WebUI now work on the TV and the phone too:
+  - TV guide › EPG sources: the provider's own guide and the global sources, with their channel count, last refresh and how far each reaches. Download, switch on or off, reorder or delete a source, or add an XMLTV address.
+  - Network & integrations › WebDAV: add, edit and delete sources.
+  - Addons & TMDB › Film data services: each service's key status. The Movie of the Night, MDBList, TMDB and OMDb keys can be saved, checked and deleted, the IMDb package refreshed, and Simkl connected with a code (QR), synced and disconnected.
+  - AI presets: listed in the player menu's order, the active one marked. OK on a name opens Edit, Move and Delete; editing works in a window, as on the WebUI.
+- IPTV › Lists & folders holds the channel list and VOD list editors and the channel search; Favorites starts with the favourite list editors.
+- The AI settings come in a new order: languages, recognition and translation, subtitle translation, subtitles and voices, context.
+- Languages: the app and WebUI languages in a menu item of their own, with links to the audio and subtitle, film data and AI languages.
+- Layout & appearance is split into separate pages, and "TV browsing" is now "Navigation & previews".
+- Where a page is edited on the WebUI, the WebUI's switch, address and QR code are right there.
+
+### Quick settings, rebuilt
+
+- AI engine and Subtitles & voice are split into submenus, and Context is the AI engine's last one. The Display items are grouped by what they do.
+- Two switches always stay in the header: "AI translator" and "Persistent" (the AI stays on across channel switches).
+- Channel search is here too, under Settings.
+
+### Player buttons, arranged on the screen
+
+- The player's buttons are arranged on a small picture of the screen — top, middle and bottom, in order — in a window of their own, so the whole picture stays in view. From the Quick settings, from Settings and on the WebUI, where they can also be dragged.
+- Live TV and films/series have their own buttons, switches and default aspect ratio. The film player starts as a copy of the live one.
+- On live TV, Timeshift is one item: Pause in the middle starts it and the "Timeshift" button sits at the bottom; switched off, neither shows.
+- Films can have a central Play/Pause on TV too, so ±10 s can go in the middle.
+- New: a Recently watched channels button, Reload as an icon (its word can be added), and the clock and the playback time placed on the same picture.
+
+### Timeshift: save when stopping
+
+- Stopping an unsaved timeshift asks what to do: save it and stop, save it and keep recording in DVR mode (the live picture comes back), or stop without saving. Until now it could only be saved with the DVR button.
+- A running recording shows a blinking red REC mark on the bar when the DVR button is not there; OK on it stops the recording.
+
+### The channel's programme list on Right
+
+- On TV, Right on a live channel shows its programmes in place of the channel list, in the same rows: time and title, a header at each new day, LIVE on the one airing now.
+- OK opens the programme window (catch-up, recording, reminder). Another Right starts the channel, as OK on its row does. Left and Back return to the same row.
+- In the player's quick list and in the Live TV and Favorite TV browsers.
+- The quick list also shows the focused channel's current programme in a small window beside the channels. The live list is a little narrower to make room.
+
+### Channel search in Settings
+
+- Channel search — the Live TV search window — also opens from Settings › IPTV › Lists & folders and from the player's Quick settings, at full size.
+- Under the small picture: the stream's resolution, frame rate and bit rate, so you see the quality a channel comes in.
+- Without a search, browsing works like Live TV's folder column: providers and their country codes on the left, folders and channels on the right.
+- On TV the small picture keeps its space: a second OK on a channel offers Open and Add to favourites. On touch screens the buttons stay under the picture.
+
+### Channel menus and a new EPG window
+
+- The All channels long-press menu has the same items as the favourites': Programme (EPG), Add to Multiview, Rename and Edit, with Hide at the bottom. In Live TV and in the player's quick list too.
+- A renamed channel shows its new name in every list, in channel search and in the quick list, not only in the favourites. All channels rows show the provider's own channel number.
+- Programme (EPG) opens a new window with the channel's programmes in single rows. "Assign" in its header shows where the guide comes from (source, channel, manual or automatic match), with "Assign another EPG" and "Remove the assignment". A channel without programmes offers the assignment at once.
+
+### Manual EPG matching by source
+
+- Matching a channel by hand lists every source's channel on its own row, with its current programme and how far its guide reaches; exact name matches come first.
+- A channel in the list can be opened to see that source's programmes before assigning it.
+- The source you pick becomes the channel's primary guide.
+- The search is much faster — on a TV box under a second instead of up to a minute — with a real progress count, in the app and on the WebUI.
+
+### Multiview
+
+- The Multiview entry opens on the player menus' panel above its button, and the control bar stays.
+- Saved layouts can be edited — order, delete, rename, add a channel from the navigator — and deleted. The channel playing can go into an existing or a new layout.
+- "Add to Multiview" is in every channel's long-press menu, below Add to favourites, and in the history panel's long-press menu.
+- Multiview can be shown in the side menu; it is hidden by default.
+
+### WebUI
+
+- The settings have a menu ordered by use; the side bar, the top tabs and the menu search follow it. After signing in, the page you asked for opens.
+- The live rows of a provider's channel table have the alias field and the EPG column (status, source, manual mark, current programme, programme list, EPG matching), as in Favorites. The alias and the match belong to the channel, so the favourites show the same.
+- The EPG matcher lists every source's channel on its own row, with how far its guide reaches and which one is in use.
+- SMB: when adding a source, the servers, shares and folders the device can see are browsed and picked right there. A saved password is used only with its own server and account.
+- The WebUI's access protection is set on the device, and signing out of the browser's session is in the profile menu.
+
+## Changed
+
+- Pickers and drop-down lists open on the current choice, not on their first row.
+- Addons: OK on an installed addon opens its menu (switch on or off, settings page, remove), "Install new addon" only adds, and Import and export is an item of its own. The installed list takes one row per addon.
+- Live Sport: downloading the schedule is the search's first visible step, and after a restart of the same version an unchanged schedule starts no new search. The search takes well under half the time it did.
+- Live Sport settings (provider, countries, sources, TV guide) can be set before the match list loads, the same in the app and on the WebUI.
+- Channels without a guide show their "Live" rows at once, and a real guide replaces them as soon as it arrives.
+- A large provider's refresh takes about half the time, and the TV stays usable meanwhile.
+- "Prefetch without AI too" shows only when an AI key is set: without AI it kept decoding in the background.
+
+## Fixed
+
+- Multiview
+- TV guide matching
+- Timeshift controls
+- Channel search
+- Providers list
+- Channel loading message
+- Translations
+- WebUI channel search
+
 ## 2.5.5 (3709)
 
 This release rebuilds Multiview — up to twelve channels, saved layouts you can also edit on the WebUI — shows a channel's quality variants as one row, and makes the TV guide many times faster. A live channel reloads by itself after a stream error, Settings open over the playing picture, M3U lists play DRM-protected channels, a subtitle you pick comes on without stopping the film, and the app is fully translated in every language.
