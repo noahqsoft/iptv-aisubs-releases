@@ -3,6 +3,108 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.6.1 (3875)
+
+This release lets you choose which TV guide comes first — for every provider, a folder or a single channel — and keeps each programme's full details and pictures. Private lists bring channel lists of your own, in the app and on the WebUI, with iptv-org's free channels. Teletext arrives as subtitles and as full pages, AI-translated too. The AI voice-over can speak with the device's own voice, for free, and notices on the picture tell you whenever something changes behind the scenes.
+
+## New Feature
+
+### TV guide order on four levels
+
+- A channel's own assigned guide comes first, then its folder's order, its provider's, and the global one.
+- Settings → IPTV → EPG sources: an added guide can stand before the providers' own guides, for every provider.
+- A provider's editor lists its guides in order, in the app and on the WebUI; a folder can have its own order (long-press OK on a folder → EPG order).
+- Where an added guide comes first, a channel is matched by its exact name first, so provider-tailored guides match without assigning the channels one by one.
+
+### Full EPG, on by default
+
+- The guide keeps each programme's episode, category, age rating, live/new/repeat marks and cast; the marks show in the channel rows, on the programme cards and in the programme window.
+- The guide's programme pictures show in the Live TV panel, the TV guide's side panel and the player's programme card, whole, never cropped.
+- Channel logos can come from the guide: first, or only where the provider has none.
+- Settings → IPTV → EPG settings → EPG mode → Fast keeps the lighter guide.
+
+### Private lists
+
+- Channel lists of your own, with no provider behind them: Settings → IPTV → Private lists, and IPTV › Private lists on the WebUI.
+- Add a channel by its address (one stream address is one channel, its qualities its variants), from text or an M3U file; edit, number, hide, move and delete channels and folders, several at once.
+- Copy channels from an M3U provider or another private list; a whole folder can follow its source at every refresh. Save the list as an M3U file.
+- iptv-org's free channels, with the AiSubs iptv-org addon (WebUI → Addons → Browse addons → Recommended): search by name, country and category, then add the ticked ones or every one found. A followed search keeps its folders up to date: new channels come in, the dropped ones leave.
+- Link check: the channels whose address no longer answers are marked, and can be hidden or deleted at once.
+
+### Teletext
+
+- Teletext subtitles as a subtitle track.
+- The full teletext viewer in the player (Subtitles → Teletext…): subpages, Fastext links, a page number typed in, and a transparent view over the picture.
+- Teletext pages translated by AI.
+
+### Free voice-over with the device's voice
+
+- "Device voice (free)" speaks the voice-over with the device's own speech engine (usually Speech Services by Google): no cost, no key. Settings, the player's AI menu, the AI subtitle translation window and the WebUI.
+- It always speaks the target language you set; where the device has no downloaded voice for it, the engine's free online voice speaks, and a notice says so.
+- With multiple voices, every speaker gets their own voice by gender; where a language has no male voice, men get a deepened one. With one voice, the voice can be chosen.
+- Google Cloud's monthly free tier: how much of it this month's voice-overs used, with a notice at 80% and when it is used up.
+
+### Notices on the picture
+
+- Voice-over falling behind: more than 3 seconds late, a notice says by how much, in a place you choose.
+- Server switch: when playback moves to another server of the provider, a notice names both servers and the reason.
+- AI audio track: when the AI does not get the audio track you set, a notice names the one it gets, and the AI says so when the set track is back.
+
+### Streams
+
+- A stream with several versions (for example HEVC and MPEG-2) lists every one on the Quality chip; a version that did not play is marked, and playback returns to Automatic.
+- Every audio and subtitle track on HLS streams with TS segments, with their roles in the menus (audio description, original language, hard of hearing).
+- Live AI subtitles and voice-over on HLS streams with fMP4 segments (for example NHK's HEVC version) and on channels whose sound comes as a separate audio track, without the relay.
+- Automatic zoom by the broadcaster's AFD: by default the black frame goes, without cropping.
+
+### Phone: the player's channel list as on TV
+
+- A tap plays the channel behind the list, which stays open; a tap on the playing channel goes to full screen.
+- A swipe from right to left on a channel opens its programmes for the day; on a programme, its full information.
+- The menu can be customised: the side bar and the bottom bar follow Settings → Side menu.
+
+## Added
+
+- **Text size of the app's own:** 50–150% of the device's text size (Settings → Interface & controls → Layout & appearance → Appearance), so the device can keep its large text for every other app.
+- **Fonts for large text:** Atkinson Hyperlegible (made for low vision) and Roboto Condensed.
+- **Soniox:** all of its 60 languages in the source and target lists.
+- **Side menu:** Recordings, My media, File browser, RSS releases and Torrent can be added.
+- **Multiview:** saved and default layouts can be edited in Settings → IPTV → Multiview.
+- **Exact frame rate** read from the stream, with the measured one beside it; **Stream info → Tracks** lists the stream's audio, subtitle and teletext tracks.
+- The audio and subtitle chips show how many tracks there are.
+- **Channel info on switching:** choose the details it shows.
+- Channels that ask for a Referer or User-Agent play.
+- The cost counter names the models in use for speech recognition, translation and voice-over.
+- Remove all failed recordings at once.
+- **WebUI:** search and bulk moves in favourite folders, a Copy button beside each API key.
+
+## Changed
+
+- **Player:** the programme strip opens the EPG list — the playing channel's programmes in the channel list's place — in place of the old EPG window; the remote's Info key too.
+- **Recording and timeshift take the version you watch;** a scheduled recording takes the best one. A quality you chose stays when the player restarts.
+- **Watching while a download runs:** on a provider of two or more connections, a catch-up download leaves one free.
+- **Live TV:** when the buffer runs dry, the player reloads at once, at most three times in ten minutes per channel.
+- **Voice-over voices:** a speaker keeps the voice they started with, a new speaker starts on a free voice, and gender is recognised better in fast dialogues.
+- The AI follows the audio track chosen on MPV too.
+- The Live TV panel and the player's programme box change in place, without flashing; the player's quick list opens at once.
+- Soniox and Gladia: their whole price shows as speech recognition, their own translation as $0.
+- Faster provider refresh on large lists.
+
+## Fixed
+
+- DVR recordings
+- Recording and timeshift on fMP4 HLS channels
+- Seeking on TV
+- Live Sport
+- Voice-over voices and cost booking
+- AI audio-track notice
+- Frozen live picture
+- Stream address added as a provider
+- iptv-org window on TV
+- Library tiles and folder hiding with large text
+- Quick settings on phones
+- Translations
+
 ## 2.6.0 (3786)
 
 This release rebuilds Settings — the WebUI's menu with a search, and much that could only be set in the browser now on the TV too — and the player's Quick settings. The player buttons are arranged on a picture of the screen, separately for live TV and films; Right on a channel shows its programme list; channel search comes to Settings with the stream's quality; and manual EPG matching lets you pick the source. Live Sport, the "Live" guide rows and large provider refreshes are much faster.
