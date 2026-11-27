@@ -3,6 +3,74 @@
 All notable changes to IPTV AiSubs, newest first. The number in parentheses is the build number
 shown in the app under Settings and in the web interface sidebar.
 
+## 2.6.2 (3966)
+
+This release reworks recording: a red dot and a window for the running recordings, scheduled recordings that start in the player, ask before they take the live picture, wake the box in time and carry on after an update or a power cut. Private lists grow up with M3U import, refresh reports, deep search, backup servers that take over and Free-TV's lists. The player gets an AI info box, AI subtitles on DRM live channels, live captions detected by themselves, a quality that follows your connection, and a faster timeshift.
+
+## New Feature
+
+### Recordings
+
+- A small red dot blinks at the top of the picture while a recording runs, on TV and on phones. Quick settings → Display → Timeshift/DVR (WebUI: Player → Timeshift/DVR) switches it for an unsaved timeshift (off by default) and for recordings.
+- On TV the side menu's Recordings item blinks red while a recording runs, and a badge counts the scheduled recordings you have not watched yet. The blinking item opens a window with the running recordings (channel, time window, elapsed time, provider), each with its own Stop.
+- A scheduled recording of the channel you watch in full screen starts in the player, like a DVR started by hand, and Pause pauses the recording.
+- When a recording would take the live picture's connection, a window asks about 10 seconds before: Start recording or Don't record.
+- Two minutes before a scheduled recording the box is woken and kept awake until the recording runs, so boxes that drop their network in standby record too.
+- A recording that an update or a power cut interrupted continues on its own, without opening the app.
+- Schedules show their real state (Starting…, Reconnecting, Recording), and a running one can be stopped or deleted, in the app and on the WebUI. Stopping keeps what was recorded.
+- When the provider sends no data for 30 seconds, a notice says so, and the lists show "No data from the provider" until data comes again.
+- The Recordings list says how much of a recording is missing and how many dropouts it had. It is compact, and Select deletes several recordings at once.
+
+### Private lists
+
+- **M3U import** keeps the file's TV guides, folders and each channel's stream headers (Referer, User-Agent, cookie), and reports what was read, added, duplicated or invalid. The TV guides a file named show in the list's editor, each can be switched on or off, and an import adds them only when ticked.
+- **Refresh report:** refreshing a private list shows, folder by folder, which channels are new, changed or removed; on the WebUI, List changes keeps every refresh's changes.
+- **Deep search** tries the neighbouring numbers of the list's numbered addresses and adds every channel that answers: on the whole list, a folder or a server (with the streams iptv-org knows there), each with its own limit of 3000 addresses. It shows an estimate, goes on where a stopped run ended, and keeps what it found.
+- **Backup servers** (WebUI): a server of the list gets its backups as `host:port`. When the server fails, the player tries the same address on the backups at once, with a notice; a backup that plays for a minute takes over for the whole list.
+- **Free-TV's lists** beside iptv-org's (From Free-TV), with the same window, search and following.
+- **Folder menu** (long-press OK on a folder): Deep search and Check links. Addresses that answer with an error that may pass (403, server error, timeout) are counted apart from the dead ones.
+
+### AI
+
+- **AI subtitles on DRM live channels**, from the channel's own sound, without delaying the picture. It needs two connections; on a one-connection list the AI bar says so.
+- **AI info box:** costs, providers and the AI details in a box that comes with the controls while an AI runs; three sizes and four positions (Settings › Display › AI info box).
+- **Live captions:** rolling broadcast captions, written word by word as on SVT, ITV or BBC, are detected automatically and put together into whole sentences before translation.
+- The AI cost estimate learns from your real usage, per recognizer and model, and the audio menu's AI row shows the recognizer, translator, language, output and TTS.
+
+### Player
+
+- **Quality menu → Auto switching** (on by default): the quality you pick becomes the target. When the buffer runs low the player steps down without stopping and comes back later. After a broken download the next piece comes from another quality, and the measured speed is remembered per network type.
+- **Error panel:** the player's own short error code under the reason; Try with MPV when Media3 cannot start a live channel, and Open with Media3 back.
+- **Catch-up for M3U lists** that give catch-up details (`catchup`, `catchup-source`, `catchup-days`).
+- **Timeshift** starts faster after a pause.
+
+## Added
+
+- EPG search: exact phrases in quotes, external EPG sources chosen one by one, search in an external source without a provider.
+- Stream info: for an address that redirects, the Server row shows the server that answers too.
+- Channel list on TV: Right switches to the focused provider or view, as OK does.
+- iptv-org: the country filter follows each feed's broadcast area.
+- Recording error messages in your language.
+- WebUI: group editing by country code, select all, a Favorite on/off button for the selection, and DRM in the channel editor.
+
+## Changed
+
+- A recording keeps to its set format (HLS, or the direct TS where set) for a minute before it switches; a switch shows on screen and as "TS stand-in" in Recordings, and a scheduled one goes back to HLS once HLS works again.
+- The nightly refresh skips a provider with a running or imminent recording, and refreshes it afterwards.
+- iptv-org following: adding a followed search again brings back the channels you deleted by hand; picking a country makes a country folder by default.
+- WebUI ordering: ↑ sends a row or folder to the top, ↓ to the bottom.
+- The folder menu's Choose provider is gone; the provider button of the bottom bar picks the provider.
+- While you step through the channel list, the info panel waits until you let go of the key.
+
+## Fixed
+
+- Recording
+- Timeshift
+- HLS channels
+- In-app update
+- Backup server, subtitle translation, favorites, EPG search
+- Private lists, iptv-org
+
 ## 2.6.1 (3875)
 
 This release lets you choose which TV guide comes first — for every provider, a folder or a single channel — and keeps each programme's full details and pictures. Private lists bring channel lists of your own, in the app and on the WebUI, with iptv-org's free channels. Teletext arrives as subtitles and as full pages, AI-translated too. The AI voice-over can speak with the device's own voice, for free, and notices on the picture tell you whenever something changes behind the scenes.
